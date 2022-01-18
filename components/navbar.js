@@ -18,7 +18,7 @@ function navbar() {
         <button type="submit" id="btn">Search</button>
       </div>
       <div id="signin">
-        <a href=""><i class="far fa-user"></i>Sign In / Register</a>
+        <a href=""><i class="far fa-user"></i>Sign In/Register</a>
       </div>
       <div id="cart">
         <a href=""> <i class="fas fa-shopping-cart"></i>Cart</a>
