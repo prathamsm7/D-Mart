@@ -83,11 +83,9 @@
           </div>
           <hr class="hr" />
 
-          <button id="btn-del" onclick="gotoThank()">
-            CASH/CARD ON DELIVERY
-          </button>
+          <button id="btn-del">CASH/CARD ON DELIVERY</button>
           <div class="or_span">OR</div>
-          <button id="btn-pay" onclick="gotoPay()">PAY ONLINE</button>
+          <button id="btn-pay">PAY ONLINE</button>
         </div>
       </div>
     </div>
@@ -131,5 +129,8 @@
 <script>
   document.getElementById("btn-pay").addEventListener("click", () => {
     window.location.href = "payment.html";
+  });
+  document.getElementById("btn-del").addEventListener("click", () => {
+    window.location.href = "success.html";
   });
 </script>

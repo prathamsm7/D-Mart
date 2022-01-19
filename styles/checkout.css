@@ -28,3 +28,13 @@ body {
 #logo-click:hover {
   cursor: pointer;
 }
+#thanks-div {
+  width: 60%;
+  margin: auto;
+  height: 400px;
+  text-align: center;
+}
+#thanks-img {
+  width: 200px;
+  height: 200px;
+}
