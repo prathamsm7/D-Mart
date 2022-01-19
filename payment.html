@@ -41,7 +41,7 @@
     #pay-choice > div {
       display: flex;
       justify-content: space-between;
-      padding: 10px 20px;
+      padding: 15px 20px;
       text-align: right;
       border: 1px solid silver;
     }
@@ -54,6 +54,34 @@
       cursor: pointer;
       color: #25a541;
     }
+    #secure-img {
+      margin-top: 10%;
+      width: 30%;
+    }
+    #pay-now {
+      text-align: center;
+    }
+    #btn-debit,
+    #btn-credit,
+    #btn-upi,
+    #btn-cash {
+      margin-top: 2%;
+      padding: 10px 20px;
+      color: white;
+      background-color: #25a541;
+      border: 0;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+    #btn-debit:hover,
+    #btn-credit:hover,
+    #btn-upi:hover,
+    #btn-cash:hover {
+      border: 1px solid #25a541;
+      color: #25a541;
+      background-color: white;
+      cursor: pointer;
+    }
   </style>
   <body>
     <div id="check-nav"></div>
@@ -61,27 +89,27 @@
       <h3>Select Payment Mode</h3>
       <div id="main-payment">
         <div id="pay-choice">
-          <div>
+          <div id="debit" onclick="debit()">
             <div>
               <div>
-                <i class="far fa-credit-card fa-lg"></i>
+                <i class="fas fa-credit-card fa-lg"></i>
               </div>
               <div>Debit Card</div>
             </div>
             <div><i class="fas fa-arrow-right"></i></div>
           </div>
 
-          <div>
+          <div id="credit" onclick="credit()">
             <div>
               <div>
-                <i class="far fa-credit-card fa-lg"></i>
+                <i class="fas fa-credit-card fa-lg"></i>
               </div>
               <div>Credit Card</div>
             </div>
             <div><i class="fas fa-arrow-right"></i></div>
           </div>
 
-          <div>
+          <div id="upi-div" onclick="upi()">
             <div>
               <div>
                 <img src="images/upi.png" alt="" id="upi" />
@@ -91,7 +119,7 @@
             <div><i class="fas fa-arrow-right"></i></div>
           </div>
 
-          <div>
+          <div id="cash" onclick="cash()">
             <div>
               <div>
                 <i class="fas fa-money-bill-wave fa-lg"></i>
@@ -121,4 +149,109 @@
   import { navbar } from "./components/navbar.js";
   let check_nav = document.getElementById("check-nav");
   check_nav.innerHTML = navbar();
+</script>
+<script>
+  function debit() {
+    document.getElementById("pay-now").innerHTML = null;
+    document.getElementById("credit").style.backgroundColor = "white";
+    document.getElementById("upi-div").style.backgroundColor = "white";
+    document.getElementById("cash").style.backgroundColor = "white";
+
+    let main = document.getElementById("pay-now");
+
+    let secure_img = document.createElement("img");
+    secure_img.setAttribute("id", "secure-img");
+    secure_img.src = "images/secure.jpg";
+
+    let msg = document.createElement("div");
+    msg.innerHTML = "Pay securely using your Debit Card.";
+
+    let btn = document.createElement("button");
+    btn.setAttribute("id", "btn-debit");
+    btn.innerHTML = "PAY SECURELY";
+
+    btn.addEventListener("click", () => {
+      window.location.href = "gateway.html";
+    });
+    document.getElementById("debit").style.backgroundColor = "#e4f4e8";
+    main.append(secure_img, msg, btn);
+  }
+
+  function credit() {
+    document.getElementById("pay-now").innerHTML = null;
+    document.getElementById("debit").style.backgroundColor = "white";
+    document.getElementById("upi-div").style.backgroundColor = "white";
+    document.getElementById("cash").style.backgroundColor = "white";
+
+    let main = document.getElementById("pay-now");
+
+    let secure_img = document.createElement("img");
+    secure_img.setAttribute("id", "secure-img");
+    secure_img.src = "images/secure.jpg";
+
+    let msg = document.createElement("div");
+    msg.innerHTML = "Pay securely using your Credit Card.";
+
+    let btn = document.createElement("button");
+    btn.setAttribute("id", "btn-credit");
+    btn.innerHTML = "PAY SECURELY";
+
+    btn.addEventListener("click", () => {
+      window.location.href = "gateway.html";
+    });
+    document.getElementById("credit").style.backgroundColor = "#e4f4e8";
+    main.append(secure_img, msg, btn);
+  }
+
+  function upi() {
+    document.getElementById("pay-now").innerHTML = null;
+    document.getElementById("debit").style.backgroundColor = "white";
+    document.getElementById("credit").style.backgroundColor = "white";
+    document.getElementById("cash").style.backgroundColor = "white";
+
+    let main = document.getElementById("pay-now");
+
+    let secure_img = document.createElement("img");
+    secure_img.setAttribute("id", "secure-img");
+    secure_img.src = "images/upi-image.jpg";
+
+    let msg = document.createElement("div");
+    msg.innerHTML =
+      "Pay using your VPA (UPI ID) or the QR code scanner on your UPI App (GPay, PhonePe, AmazonPay etc).";
+
+    let btn = document.createElement("button");
+    btn.setAttribute("id", "btn-upi");
+    btn.innerHTML = "PAY SECURELY";
+
+    btn.addEventListener("click", () => {
+      window.location.href = "upiGateway.html";
+    });
+    document.getElementById("upi-div").style.backgroundColor = "#e4f4e8";
+    main.append(secure_img, msg, btn);
+  }
+  function cash() {
+    document.getElementById("pay-now").innerHTML = null;
+    document.getElementById("debit").style.backgroundColor = "white";
+    document.getElementById("credit").style.backgroundColor = "white";
+    document.getElementById("upi-div").style.backgroundColor = "white";
+
+    let main = document.getElementById("pay-now");
+
+    let secure_img = document.createElement("img");
+    secure_img.setAttribute("id", "secure-img");
+    secure_img.src = "images/pod.png";
+
+    let msg = document.createElement("div");
+    msg.innerHTML = "You can pay by CARD or CASH at the time of delivery.";
+
+    let btn = document.createElement("button");
+    btn.setAttribute("id", "btn-cash");
+    btn.innerHTML = "PAY SECURELY";
+
+    btn.addEventListener("click", () => {
+      window.location.href = "thanks.html";
+    });
+    document.getElementById("cash").style.backgroundColor = "#e4f4e8";
+    main.append(secure_img, msg, btn);
+  }
 </script>
