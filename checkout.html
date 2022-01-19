@@ -15,6 +15,44 @@
     />
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
+  <style>
+    #check-price h3 {
+      margin: 15px;
+    }
+    #check-price > div {
+      display: flex;
+      justify-content: space-between;
+      margin: 15px;
+    }
+    .hr {
+      margin: 15px;
+    }
+    #btn-del,
+    #btn-pay {
+      margin-top: 5%;
+      width: 100%;
+      padding: 2% 5%;
+      font-size: 15px;
+      font-weight: bold;
+      background-color: #25a541;
+      border: 0;
+      border-radius: 4px;
+      color: white;
+    }
+    #btn-del:hover,
+    #btn-pay:hover {
+      cursor: pointer;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    #btn-pay {
+      background-color: white;
+      color: #25a541;
+      border: 1px solid #25a541;
+    }
+    .or_span {
+      padding-left: 40%;
+    }
+  </style>
   <body>
     <div id="check-nav"></div>
     <div id="check-main">
@@ -22,7 +60,34 @@
       <div id="main-cart-price">
         <div id="check-address"></div>
         <div id="check-price">
-          <h3>Price</h3>
+          <h3>Price Summary</h3>
+          <hr />
+          <div>
+            <div>Cart Total</div>
+            <div>Rs.823</div>
+          </div>
+          <hr class="hr" />
+          <div>
+            <div>Delivery Charge</div>
+            <div>Rs.50</div>
+          </div>
+          <hr class="hr" />
+          <div>
+            <div>Total Amount</div>
+            <div>Rs.872</div>
+          </div>
+          <hr class="hr" />
+          <div>
+            <div>Total Savings</div>
+            <div>Rs.196</div>
+          </div>
+          <hr class="hr" />
+
+          <button id="btn-del" onclick="gotoThank()">
+            CASH/CARD ON DELIVERY
+          </button>
+          <div class="or_span">OR</div>
+          <button id="btn-pay" onclick="gotoPay()">PAY ONLINE</button>
         </div>
       </div>
     </div>
@@ -35,4 +100,36 @@
   let add_address = document.getElementById("check-address");
   check_nav.innerHTML = navbar();
   add_address.innerHTML = address();
+
+  document.getElementById("logo-click").addEventListener("click", () => {
+    window.location.href = "index.html";
+  });
+  document.getElementById("add-form").addEventListener("submit", (event) => {
+    event.preventDefault();
+    let show_add = document.getElementById("check-address");
+    let div = document.createElement("h3");
+    let detail_div = document.createElement("div");
+    let name = document.getElementById("add-name").value;
+
+    let detail =
+      document.getElementById("add-one").value +
+      ", " +
+      document.getElementById("add-area").value +
+      ", " +
+      document.getElementById("add-land").value +
+      ", " +
+      document.getElementById("add-two").value +
+      "-" +
+      document.getElementById("add-pin").value;
+    div.innerHTML = name;
+
+    detail_div.innerHTML = detail;
+    show_add.append(div, detail_div);
+    window.location.href = "#";
+  });
+</script>
+<script>
+  document.getElementById("btn-pay").addEventListener("click", () => {
+    window.location.href = "payment.html";
+  });
 </script>

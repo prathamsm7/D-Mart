@@ -13,11 +13,11 @@ let address = () => {
     <a class="close" href="#">&times;</a>
     <div class="content">
       <div class="container">
-        <form>
+        <form id="add-form">
           <div class="in-flex">
             <div>
               <label>Full Name*</label>
-              <input required placeholder="Your name.." type="text" />
+              <input required placeholder="Your name.." type="text" id="add-name"/>
             </div>
             <div>
               <label>Mobile No*</label>
@@ -31,26 +31,26 @@ let address = () => {
           <div class="in-flex">
             <div>
               <label>Pincode*</label>
-              <input required placeholder="Pincode" type="text" />
+              <input required placeholder="Pincode" type="text" id="add-pin" />
             </div>
             <div>
               <label>Area*</label>
-              <input required placeholder="Area name" type="text" />
+              <input required placeholder="Area name" type="text" id="add-area" />
             </div>
           </div>
 
           <label>Address line 1*</label>
-          <input required placeholder="Address line 1" type="text" />
+          <input required placeholder="Address line 1" type="text" id="add-one"/>
 
           <label>Address line 2</label>
-          <input placeholder="Address line 2" type="text" />
+          <input placeholder="Address line 2" type="text" id="add-two"/>
 
           <label>Landmark*</label>
-          <input required placeholder="Landmark" type="text" />
+          <input required placeholder="Landmark" type="text" id="add-land" />
           <hr />
 
           <div>
-            <input type="submit" value="Add Address" />
+            <input type="submit" value="Add Address" id="add-submit"/>
           </div>
         </form>
       </div>

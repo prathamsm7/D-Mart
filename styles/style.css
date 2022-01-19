@@ -88,7 +88,6 @@ input[type="submit"] {
 #check-address {
   width: 60%;
   border: 1px solid silver;
-  height: 500px;
 }
 #check-price {
   width: 25%;
