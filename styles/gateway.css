@@ -90,3 +90,16 @@ span.price {
   float: right;
   color: grey;
 }
+@media only screen and (min-width: 0px) and (max-width: 375px) {
+  .container {
+    display: inline;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 376px) and (max-width: 768px) {
+  .container {
+    display: inline;
+    width: 100%;
+    margin: auto;
+  }
+}
