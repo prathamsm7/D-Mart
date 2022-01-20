@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cart</title>
+    <link rel="stylesheet" href="Cart.css">
+    <link rel="stylesheet" href="./styles/navbar.css" />
+</head>
+
+<body>
+    <div id="navbar"></div>
+    <!-- <div class="header">
+        <a href="../Landing Page (O)/index.html"><img id="company-logo" src="logo.png" alt="company logo"></a>
+        <div class="header-right">
+            <a href="../Favourite List (B)/favourite.html">Favourite</a>
+            <a href="../Past Purchase (V)/pastPurchase.html">Past Purchases</a>
+            <a href="../Cart (R)/Cart.html">Cart</a>
+            <a id="isLogin" href="../Login (K)/login.html">Login/Signup</a>
+        </div>
+    </div> -->
+    <div class="cart_container">
+        <div class="cart_nav">
+            <div>
+                <p>Your Shopping Cart <b><label class="cart-items-count">0</b></label> Items</p>
+            </div>
+            <!-- <div>
+                <button id="homepage-button">CONTINUE SHOPPING</button> <button id="checkout-btn-top">PROCEED TO
+                    CHECKOUT</button>
+            </div> -->
+        </div>
+        <!-- <p>GET YOUR ORDER DELIVERED TODAY</p> -->
+        <div class="cart">
+        <div class="cart_data_table">
+            <table>
+                <thead>
+                    <tr>
+                        <td>#</td>
+                         
+                        <td>Product</td>
+                         <td></td>
+                        <td>No. of items</td>
+                        <td>You Pay</td>
+                        <td>You Save</td>
+                        
+                      
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div class="checkout">
+            <!-- <div>
+                <input type="text" placeholder="enter promo code here" id="promoCode" />
+                <button onclick="applyPromo()">Apply Promo</button>
+            </div> -->
+            <div class="total_amount">
+                <p>Price Summary <b><label id="cart-items-c">0</b></label> Items</p>
+                <hr>
+                <p>Sub Total : ₹ <label id="sub-total"> 00</label></p>
+                <hr>
+                <p>Delivery Charges : ₹ <label>50.00</label></p>
+                <hr>
+                <p>Discount :  <label id="discount">00</label></p>
+                <hr>
+                <p><b>Total : ₹ <label id="total">₹ 50.00</label></b></p>
+
+            </div>
+            <div class="cart_nav_bottom">
+                <button id="checkout-btn-bottom">PROCEED TO
+                   CHECKOUT</button>
+           </div>
+        </div>
+       
+    </div>
+</div>
+    <!-- <div class="footer">
+        <div>
+            <h4>ABOUT US</h4>
+            <a href="#">About Us</a>
+            <a href="#">Our Vision & Purpose</a>
+            <a href="#">Quality standards</a>
+            <a href="#">Awards</a>
+            <a href="#">FAQs</a>
+            <a href="#">Available Delivery Slot</a>
+            <a href="#">Vendor Connect</a>
+        </div>
+        <div>
+            <h4>OUR POLICIES</h4>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Payment Policy</a>
+            <a href="#">Disclaimer</a>
+            <a href="#">Statutory Compliance</a>
+            <a href="#">Data Protection Policy</a>
+            <a href="#">Grievance Officer</a>
+            <a href="#">Information Security Policy</a>
+        </div>
+        <div>
+            <h4>NEWS & MEDIA</h4>
+            <a href="#">Press releases</a>
+            <a href="#">Newsletters</a>
+            <a href="#">Events</a>
+            <a href="#">Photo gallery</a>
+            <a href="#">Recipes</a>
+            <a href="#">NBTV</a>
+            <a href="#">Our Virtual Store</a>
+        </div>
+        <div>
+            <h4>CONTACT US</h4>
+            <p>cs@naturesbasket.co.in</p>
+            <p>+9188800 77745​</p>
+            <p>Office Time: 09.00 am to 09.00 pm</p>
+            <p>Nature's Basket <br><b>©</b> 2021</p>
+        </div>
+        <div>
+            <h4>KEEP IN TOUCH</h4>
+            <div>
+                <a href="https://www.facebook.com/NaturesBasket" target="_blank"><img
+                        src="https://img.icons8.com/material-outlined/48/000000/facebook-new.png" /></a>
+                <a href="https://twitter.com/NaturesBasket" target="_blank"><img
+                        src="https://img.icons8.com/material-outlined/48/000000/twitter-squared.png" /></a>
+            </div>
+            <div>
+                <a href="https://www.youtube.com/user/GodrejNaturesBasket" target="_blank"><img
+                        src="https://img.icons8.com/material-outlined/48/000000/youtube--v2.png" /></a>
+                <a href="https://instagram.com/NaturesBasket/" target="_blank"><img
+                        src="https://img.icons8.com/material-outlined/48/000000/linkedin--v2.png" /></a>
+            </div>
+        </div>
+    </div> -->
+</body>
+
+</html>
+<script type="module">
+    import navbar from "../components/navbar.js";
+  
+    let nav = document.getElementById("navbar");
+    nav.innerHTML = navbar();
+  </script>
+
+
+<script 
+src="Cart.js">
+</script>
