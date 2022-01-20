@@ -2,7 +2,7 @@ function navbar() {
     return `
       <div id="logo">
           <img
-            src="https://tse2.mm.bing.net/th?id=OIP.CFth4UtrqG9G0JCPZSfIqgAAAA&pid=Api&P=0&w=317&h=127"
+            src="https://github.com/prathamsm7/D-Mart/blob/venkat/images/logo.jpg?raw=true"
             alt="logo"
           />
         </div>
