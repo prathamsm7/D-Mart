@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    <link rel="stylesheet" href="/style/navbar.css">
+    <link rel="stylesheet" href="/style/sidebar.css">
+    <link rel="stylesheet" href="/style/ready.css">
+    <style>
+    #block{
+        height:500px;
+        width :500px;
+        border: 1px solid transparent;
+        margin-left: 300px;
+        
+
+    }
+    #img1{
+        height:350px;
+        width:500px;
+        border: 1px solid transparent;
+
+    }
+    #p_tag{
+        height:100px;
+        width:500px;
+        border: 1px solid transparent;
+        text-align: center;
+
+    }
+    #btn0{
+        height:50px;
+        width:500px;
+        border: 1px solid transparent;
+        text-align: center;
+
+    }
+    #img11{
+        height:350px;
+        width:500px;
+    }
+    #btn00{
+          height:40px;
+          width:200px;
+          color:white;
+          background-color: rgb(35, 168, 35);
+          border-radius: 5px;
+
+    }
+    #pu{
+        font-size: 20px;
+        font-weight: 200;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    #pd{
+        font-size: 15px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: grey;
+    }
+    </style>
+</head>
+<body>
+    <div id="navbar"></div>
+    <div id="center">
+        <div id="left">
+         
+
+        </div>
+        <div id="right">
+            <div id="block">
+                <div id="img1">
+                    <img id="img11" src="https://ak1.picdn.net/shutterstock/videos/32669941/thumb/12.jpg?i10c=img.resize(height:160)" alt="">
+                </div>
+                <div id="p_tag">
+                    <p id="pu" >There are no item in your Ready list</p>
+                    <p id="pd">The list will be auto-populated according to the items you frequently buy.</p>
+                </div>
+                <div id="btn0">
+                    <button id="btn00">START SHOPPING</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div id="ftr3"></div>
+</body>
+</html>
+<script type="module">
+    import navbar from "/script/navbar.js";
+
+let nav = document.getElementById("navbar");
+nav.innerHTML = navbar();
+
+import sidebar from "/script/sidebar.js";
+  let side = document.getElementById("left");
+  side.innerHTML = sidebar();
+
+</script>
+<script>
+    
+</script>

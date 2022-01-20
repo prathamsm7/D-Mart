@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Navbar</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    <link rel="stylesheet" href="/style/navbar.css" />
+    <link rel="stylesheet" href="/style/sidebar.css">
+    <link rel="stylesheet" href="/style/myAddress.css">
+    <style>
+     
+
+        
+    </style>
+    
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <div id="center">
+        <div id="left">
+         
+
+        </div>
+        <div id="right">
+            <div id="top_line">
+            <p id="vag">Profile</p><p id="vag_2"> > </p><p id="add_top">Address Form</p>
+            </div>
+            <h1 id="heading">My Address</h1>
+            <form id="form_1" action="">
+                <p id="vag">Full Name*</p>
+               <input id="tag" type="text">
+               <p id="vag">Mobile No. (To assist Delivery)</p>
+               <input id="tag" type="text">
+               <p id="vag">Pincode*</p>
+               <input id="tag" type="text">
+               <p id="vag">Area*</p>
+               <input id="tag" type="text">
+               <p id="vag">Address Line 1 (flat no, floor, building ,company)</p>
+               <input id="tag" type="text">
+               <p id="vag">Address Line 2 (locality, colony , street, sector)</p>
+               <input id="tag" type="text">
+               <p id="vag">Landmark</p>
+               <input id="tag" type="text">
+               <br>
+
+               <input id="save" type="submit" value="SAVE CHANGES">
+
+            </form>
+        </div>
+    </div>
+
+  </body>
+</html>
+<script type="module">
+  import navbar from "/script/navbar.js";
+
+  let nav = document.getElementById("navbar");
+  nav.innerHTML = navbar();
+
+  import sidebar from "/script/sidebar.js";
+  let side = document.getElementById("left");
+  side.innerHTML = sidebar();
+  
+</script>
+
+<script>
+       let side_bar = document.createElement("div")
+       side_bar.setAttribute("id","side_bar");
+
+
+       document.querySelector("#form_1").addEventListener("submit",display)
+    var data = JSON.parse(localStorage.getItem("data"))||[]
+
+     
+
+    function display(event){
+      event.preventDefault();
+
+
+     var bozazObj = {
+         category : form.category.value,
+         title: form.title.value,
+         description: form.description.value,
+         price: form.price.value,
+      }
+      bozazArr.push(bozazObj)
+      
+      localStorage.setItem("data",JSON.stringify(bozazArr));
+      displayTable(bozazArr);
+    }
+
+    
+
+
+</script>

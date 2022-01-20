@@ -1,0 +1,93 @@
+
+        #signup{
+            height:360px;
+            width:400px;
+            border: 1px solid transparent;
+            margin-left: 25px;
+            color:grey;
+           
+ 
+        }
+       
+        #sidebar{
+            height:700px;
+            width:300px;
+            border:1px solid rgb(155, 218, 155)
+        }
+        #container{
+            display: flex;
+        }
+        #submit{
+            margin-top:10px;
+        }
+        #form_reg > h2 {
+             font-size: 15px;
+        }
+        #name{
+            height:30px;
+            width:300px;
+            border: 1px solid rgb(198, 202, 198);
+            border-radius: 10px;
+        }
+        #mobile_no{
+            height:30px;
+            width:300px;
+            border: 1px solid rgb(198, 202, 198);
+            border-radius: 10px;
+
+        }
+        #id{
+            height:30px;
+            width:300px;
+            border: 1px solid rgb(198, 202, 198);
+            border-radius: 10px;
+
+        }
+        #password{
+            height:30px;
+            width:300px;
+            border: 1px solid rgb(198, 202, 198);
+            border-radius: 10px;
+
+        }
+        #submit{
+            height:30px;
+            width:308px;
+            border: 1px solid rgb(198, 202, 198);
+            border-radius: 10px;
+            margin-top: 20px;
+
+        }
+        #submit:hover{
+           
+            background-color: green;
+            color: honeydew;
+        }
+        #sign_name{
+            color: black;
+            font-size: 20px;
+            margin-left: 50px;
+        }
+        #side_img{
+            height:700px;
+            width:300px;
+        }
+        
+        #grey{
+            font-size: 13px;
+        }
+        #green{
+            color: green;
+            font-size: 13px;
+        }
+        #line{
+            width:300px;
+            
+            border: 1px solid grey;
+        }
+        #user{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 10px;
+            color:green;
+            margin-right: 10px;
+        }
