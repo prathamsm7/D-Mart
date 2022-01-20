@@ -1,0 +1,13 @@
+#left{
+    height:500px;
+    width:250px;
+    border:2px solid rgb(204, 211, 204);
+}
+#ftr3{
+    height:300px;
+    width:100%;
+    border:1px solid black;
+}
+#center{
+    display:flex;
+}
