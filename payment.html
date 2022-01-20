@@ -20,16 +20,13 @@
   </head>
   <style>
     #main-payment {
-      display: flex;
+      display: grid;
+      grid-template-columns: 25% 60%;
       height: 500px;
       /* border: 1px solid grey; */
     }
-    #pay-choice {
-      width: 25%;
-      border: 1px solid silver;
-    }
+    #pay-choice,
     #pay-now {
-      width: 60%;
       border: 1px solid silver;
     }
     #upi {
@@ -81,6 +78,24 @@
       color: #25a541;
       background-color: white;
       cursor: pointer;
+    }
+    @media only screen and (min-width: 0px) and (max-width: 375px) {
+      #main-payment {
+        display: inline;
+        width: 100%;
+      }
+      #pay-now {
+        height: 300px;
+      }
+    }
+    @media only screen and (min-width: 376px) and (max-width: 768px) {
+      #main-payment {
+        display: inline;
+        width: 100%;
+      }
+      #pay-now {
+        height: 500px;
+      }
     }
   </style>
   <body>
