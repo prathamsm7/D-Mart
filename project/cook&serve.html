@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script src="https://kit.fontawesome.com/059c5846e8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <div id="continer">
+        <div id="doulath"><div id="cat">
+            <h3><i class="fas fa-bars">  All Categories</i></h3>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th><h3>Home & kichen</h3></th>
+                
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="detergent" onclick="detergent()"><td>Detergent & Fabric Care</td></tr>
+                <tr id="cleaners" onclick="cleaners()"><td>Cleaners</td></tr>
+                <tr id="tableware" onclick="tableware()"><td>Tableware</td></tr>
+                <tr id="kitchen" onclick="kitchen()"><td>Kitchen Tools</td></tr>
+                <tr id="disinfectants" onclick="disinfectants()"><td>Disinfectants</td></tr>
+                <tr id="bed" onclick="bed()"><td>Bed & Bath</td></tr>
+            </tbody>
+        </table>
+            
+        </div>
+        <hr/>
+        <div id="basha">
+            <div id="nav"></div>
+            <h1 id="h1">Cookware & Serveware</h1>
+    <div id="con"></div>
+        </div>
+        
+</div>
+   
+</body>
+</html>
+<script type="module">
+    import nav from "./nav.js";
+    document.getElementById("nav").innerHTML=nav()
+
+</script>
+<script src="./cook&serve.js"></script>
