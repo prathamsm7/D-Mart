@@ -171,13 +171,13 @@ img {
     min-width: 200px;
     padding: 0;
   }
-  .footer {
+/*   .footer {
     justify-content: center;
   }
 
   .footer > div {
     margin: 10px;
-  }
+  } */
 }
 
 @media only screen and (min-width: 376px) and (max-width: 1205px) {
@@ -218,11 +218,11 @@ img {
   td {
     padding: 10px;
   }
-  .footer {
+/*   .footer {
     justify-content: center;
   }
 
   .footer > div {
     margin: 20px;
-  }
+  } */
 }
