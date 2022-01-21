@@ -70,6 +70,7 @@
 
   document.getElementById("logo-click").addEventListener("click", () => {
     window.location.href = "index.html";
+  // document.getElementById("nav-name").textContent = localStorage.getItem("");
   });
   document.getElementById("add-form").addEventListener("submit", (event) => {
     event.preventDefault();
@@ -120,6 +121,4 @@
   document.querySelector("#amount").textContent = `Rs. ${final_amount}`;
   document.querySelector("#sub-total").textContent = `Rs. ${cart_total}`;
   document.getElementById("total-save").innerHTML = `Rs. ${total_save}`;
-
-  // document.getElementById("nav-name").textContent = localStorage.getItem("");
 </script>
