@@ -32,12 +32,14 @@ body {
 
 .cart_nav_bottom > button,
 .cart_nav > div > button {
+  width: 100%;
   margin: 0 10px;
-  padding: 5px 20px;
-  border-radius: 01px;
+  padding: 10px 20px;
+  border-radius: 4px;
   color: white;
   background-color: green;
   cursor: pointer;
+  margin-top: 25px;
   margin-bottom: 20px;
 }
 
@@ -83,13 +85,14 @@ td {
   align-items: flex-start;
   border: 2px solid red transparent;
   font-size: large;
-  padding: 10px;
+  padding: 30px;
+  margin-bottom: 30px;
 }
 
 .checkout > div > button {
-  background-color: green;
+  background-color: red;
   cursor: pointer;
-  border-radius: px;
+  border-radius: 50px;
   color: white;
   -ms-flex-align: start;
   margin-right: auto;
@@ -101,13 +104,29 @@ td {
   background-color: #477212;
 }
 
-.total_amount {
-  align-items: flex-start;
+.total_amount > div {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  /* margin-right: 45px; */
+  text-align: center;
+  padding-right: 40px;
+
+  border: 1px solid blue transparent;
 }
 
 .total_amount {
-  text-align: left;
-  /* margin-right: 10%; */
+  border: 1px solid blue transparent;
+  box-shadow: rgba(236, 237, 238, 0.3) 0px 0px 0px 3px;
+}
+.total_amount > div > div:nth-child(2) {
+  margin-left: 200px;
+}
+#total {
+  text-align: center;
+}
+#sub-total {
+  text-align: center;
 }
 
 #remove-item-button {
@@ -132,6 +151,9 @@ img {
 /* #td2 > p {
   margin-left: 90px;
 } */
+#check-price {
+  display: flex;
+}
 
 @media only screen and (min-width: 0) and (max-width: 376px) {
   .header {
@@ -161,6 +183,10 @@ img {
     overflow-x: scroll;
     display: inline-block;
   }
+  .total {
+    width: 100%;
+    overflow-x: scroll;
+  }
   img {
     margin-top: 5px;
     width: 50px;
@@ -171,7 +197,7 @@ img {
     min-width: 200px;
     padding: 0;
   }
-/*   .footer {
+  /* .footer {
     justify-content: center;
   }
 
@@ -180,7 +206,7 @@ img {
   } */
 }
 
-@media only screen and (min-width: 376px) and (max-width: 1205px) {
+@media only screen and (min-width: 376px) and (max-width: 1265px) {
   .header {
     text-align: center;
   }
@@ -214,11 +240,14 @@ img {
     /* overflow-x: scroll; */
     display: inline-block;
   }
-
-  td {
-    padding: 10px;
+  .total {
+    width: 100%;
   }
-/*   .footer {
+
+  /* td {
+    padding: 0px;
+  } */
+  /* .footer {
     justify-content: center;
   }
 

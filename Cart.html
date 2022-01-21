@@ -12,13 +12,13 @@
 
 <body>
     <div id="navbar"></div>
- 
+  
     <div class="cart_container">
         <div class="cart_nav">
             <div>
                 <p>Your Shopping Cart <b><label class="cart-items-count">0</b></label> Items</p>
             </div>
-           
+         
         </div>
         <!-- <p>GET YOUR ORDER DELIVERED TODAY</p> -->
         <div class="cart">
@@ -43,19 +43,55 @@
             </table>
         </div>
         <div class="checkout">
-           
+          
+            <!-- <div class="total_amount">
+                <diV><p>Price Summary  <b><label id="cart-items-c">0</b></label>  Items</p></diV>
+                
+                <hr>
+                <div><p>Sub Total : ₹ <label id="sub-total"> 00</label></p></div>
+                
+                <hr>
+                <diV><p>Delivery Charges : ₹ <label>50.00</label></p></diV>
+                
+                <hr>
+                <div><p>Discount :  <label id="discount">00</label></p></div>
+                
+                <hr>
+                <div> <p><b>Total : ₹ <label id="total">₹ 50.00</label></b></p></div>
+               
+
+            </div> -->
+
             <div class="total_amount">
                 <p>Price Summary <b><label id="cart-items-c">0</b></label> Items</p>
-                <hr>
-                <p>Sub Total : ₹ <label id="sub-total"> 00</label></p>
-                <hr>
-                <p>Delivery Charges : ₹ <label>50.00</label></p>
-                <hr>
-                <p>Discount :  <label id="discount">00</label></p>
-                <hr>
-                <p><b>Total : ₹ <label id="total">₹ 50.00</label></b></p>
+                <hr />
+                <div>
+                  <div>Cart Total</div>
+                  <div>
+                    <p>Rs.<label id="sub-total"></label></p>
+                  </div>
+                </div>
+                <hr class="hr" />
+                <div>
+                  <div>Delivery Charge</div>
+                  <div>Rs.50</div>
+                </div>
+                <hr class="hr" />
+                <div>
+                  <div>Total Amount</div>
+                  <p>Rs.<label id="total"></label></p>
+                </div>
+                <hr class="hr" />
+                <div>
+                  <div>Total Savings</div>
+                  <div>Rs.50</div>
+                </div>
+               
 
-            </div>
+
+
+
+
             <div class="cart_nav_bottom">
                 <button id="checkout-btn-bottom">PROCEED TO
                    CHECKOUT</button>
@@ -64,7 +100,7 @@
        
     </div>
 </div>
-    
+   
 </body>
 
 </html>
