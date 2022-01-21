@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style/navbar.css" />
+    <link rel="stylesheet" href="/style/signup.css">
+    <link rel="stylesheet" href="/style/sidebar.css">
+    <link rel="stylesheet" href="/style/footer.css">
+
+   
+    <style>
+        
+/*         
+        #ftr{
+            height:300px;
+            width:100%;
+            border:1px solid black;
+        } */
+        
+    </style>
+
+    
+    
+</head>
+<body>
+    
+    <div id="navbar"></div>
+   <div id="container">
+       
+   <div id="sidebar"><img id="side_img" src="https://celebmafia.com/wp-content/uploads/2016/04/miranda-kerr-goes-grocery-shopping-in-malibu-4-2-2016-7.jpg" alt=""></div>
+
+   <div id="signup">
+       <h3 id="sign_name">Let's get you logged in</h3>
+       <div id="line"></div>
+       <form action="" id="form_reg">
+           <h2>Full name</h2>
+           <input id = "name" type="text" placeholder = "enter name">
+
+           <!-- <h2>Location</h2>
+           <input id="location" type="text" placeholder = "enter location"> -->
+           
+
+           <h2>Mobile No.</h2>
+           <input id="mobile_no" type="text" placeholder = "enter number">
+
+           <br>
+           <h2>Email Id</h2>
+           <input id= "id" type="text" placeholder = "enter email id">
+
+           <br>
+           <h2>Password</h2>
+           <input id="password" type="text" placeholder = "Password">
+           <br>
+
+           <!-- <h2>SIGN UP</h2> -->
+           <div id="terms"><p id="grey">By clicking on continue, you agree to our </p><p id="green">Terms & Conditions, Refunds Policy and Privacy Policy</p></div>
+           <input id="submit" type="submit" value="Continue">
+
+           
+
+       </form>
+       <!-- <a href = "login.html"><p onclick="gologin()"> Log in with an existing account</p></a> -->
+   </div>
+</div>
+<div id="ftr">Footer</div>
+</body>
+</html>
+<script type="module">
+
+import navbar from "/script/navbar.js";
+console.log(navbar);
+
+let nav = document.getElementById('navbar');
+nav.innerHTML = navbar();
+
+import sidebar from "/script/sidebar.js";
+  let side = document.getElementById("sidebar");
+  side.innerHTML = sidebar();
+
+  import footer from "/script/footer.js";
+  let foot = document.getElementById("ftr");
+
+  foot.innerHTML = footer();
+
+</script>
+<script >
+      
+      document.getElementById("form_reg").addEventListener("submit",display);
+
+      function display(event){
+
+        event.preventDefault();
+        let flag =true;
+        let name = document.getElementById('name').value;
+        let mobile_no = document.getElementById('mobile_no').value;
+        let id = document.getElementById("id").value;
+
+        let password = document.getElementById("password").value;
+
+        // let location = document.getElementById("location").value;
+        
+        if(name ==  "" || mobile_no== ""|| id== "" ||password ==  "" ){
+            alert("please fill all the details");
+            return;
+        }
+
+        let signup_details = {
+            "name" : name,
+            "id" : id,
+            "mobile_no":mobile_no,
+            "password": password,
+            // "location" : location,
+        }
+         
+        
+         let arr= localStorage.getItem("mylocal");
+     
+
+         if(arr == null){
+             arr = []
+         
+         }else{
+            arr = JSON.parse(localStorage.getItem("mylocal"))
+           arr.forEach(el => {
+            if(el.id == signup_details.id ){
+                    alert("User already exist")
+                    flag = false;
+                    return;
+                }
+           });
+            if(flag == false){
+                return;
+            }
+            
+         }
+         
+         arr.push(signup_details)
+         localStorage.setItem("mylocal" , JSON.stringify(arr));
+         alert("Account Created")
+         appendData(event);
+        //  appendDetails();
+         appendlocation();
+         
+        
+         
+
+    }
+
+    function appendData(evnet){
+        event.preventDefault();
+        let user = document.getElementById("name").value;
+        document.getElementById("user").innerText = user;
+        localStorage.setItem("mylocal_2", user);
+        return  user;
+        
+
+    }
+
+    function appendlocation(){
+       
+        let location = document.getElementById("location").value;
+        document.getElementById("city").innerText = location;
+        localStorage.setItem("mylocal_3", location);
+
+        console.log(location);
+        return  location;
+        
+
+    }
+
+    
+
+</script>
