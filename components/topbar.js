@@ -44,7 +44,7 @@ function prod_card(img, nams, mrp, sp, sv, elem) {
       <div id="p_div">
         <p>MRP ${mrp}</p>
         <p>DMart ${sp}</p>
-        <p>Save ${sv}</p>
+        <p>Save 10%</p>
       </div>
       <input type="text" value="475gm" />
       <button id="addCart">ADD TO CART</button>

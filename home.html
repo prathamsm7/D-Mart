@@ -15,10 +15,20 @@
     <link rel="stylesheet" href="./styles/navbar.css" />
     <link rel="stylesheet" href="./styles/home.css" />
     <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="stylesheet" href="./styles/search.css" />
   </head>
   <body>
     <!-- navbar -->
     <div id="navbar"></div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <ul id="searchList"></ul>
+      </div>
+    </div>
 
     <!-- Topbar -->
     <div id="topbar"></div>
@@ -171,6 +181,7 @@
 <script type="module">
   import { navbar, openmenu } from "../components/navbar.js";
   import footer from "../components/footer.js";
+  import { findprod, appendProdData } from "../components/search.js";
   import {
     topbar,
     carasoul,
@@ -379,40 +390,53 @@
 
   let prods = [
     {
-      nams: "Veda Prash Premium Jaggery Chyawanprash : 475 gms",
-      img: "https://img.dmart.in/images/rwd/products/J/A/N/JAN120005349xx11JAN22_5_P.jpg",
-      mrp: "₹899",
-      sp: "₹680",
-      sv: "₹219",
+      imgUrl:
+        "https://img.dmart.in/images/rwd/products/N/O/V/NOV110000403xx20NOV21_5_P.jpg",
+      name: "Premia Jeera : 200 gms",
+      strikedOffPrice: 68,
+      price: 52,
     },
     {
-      nams: "Mahalaxmi Pista Peanut Chikki : 500 gms",
-      img: "https://img.dmart.in/images/rwd/products/D/E/C/DEC120005306xx13DEC21_5_P.jpg",
-      mrp: "₹280",
-      sp: "₹140",
-      sv: "₹140",
+      imgUrl:
+        "https://img.dmart.in/images/rwd/products/N/O/V/NOV110000380xx24NOV21_5_P.jpg",
+      name: "Premia Sugar : 5 kgs",
+      price: 222,
+      strikedOffPrice: 266,
     },
     {
-      nams: "Kellogg's Corn Flakes Original : 875 gms",
-      img: "https://img.dmart.in/images/rwd/products/I/C/o/ICornFlakes875gKMST1256xx310521_5_P.jpg",
-      mrp: "₹310",
-      sp: "₹199",
-      sv: "₹111",
+      imgUrl:
+        "https://img.dmart.in/images/rwd/products/N/O/V/NOV110000300xx20NOV21_5_P.jpg",
+      name: "Premia Groundnut : 500 gms",
+      price: 90,
+      strikedOffPrice: 113,
     },
     {
-      nams: "Saffola Immuniveda Chyawanprash : 1.25 kgs",
-      img: "https://img.dmart.in/images/rwd/products/D/E/C/DEC120004044xx18DEC21_5_P.jpg",
-      mrp: "₹525",
-      sp: "₹262",
-      sv: "₹263",
+      imgUrl:
+        "https://img.dmart.in/images/rwd/products/N/O/V/NOV110000427xx20NOV21_5_P.jpg",
+      name: "Premia Poha Jada : 1 kg",
+      price: 50,
+      strikedOffPrice: 55,
+    },
+    {
+      imgUrl:
+        "https://img.dmart.in/images/rwd/products/N/O/V/NOV110000401xx20NOV21_5_P.jpg",
+      name: "Premia American Badam (Almonds) : 500 gms",
+      price: 336,
+      strikedOffPrice: 436,
     },
   ];
 
   let prod_cards = document.getElementById("prod_cards");
 
   prods.forEach((elem, index) => {
-    let { img, nams, mrp, sp, sv } = elem;
-    prod_cards.innerHTML += prod_card(img, nams, mrp, sp, sv, elem);
+    let { imgUrl, name, price, strikedOffPrice } = elem;
+    prod_cards.innerHTML += prod_card(
+      imgUrl,
+      name,
+      price,
+      strikedOffPrice,
+      elem
+    );
   });
 
   var cartArr = JSON.parse(localStorage.getItem("cartDatabase")) || [];
@@ -437,53 +461,88 @@
   let f_input = document.querySelector(".f_input");
   let btncl = document.querySelectorAll("#btn");
 
+  var modal = document.getElementById("myModal");
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  let sList = document.getElementById("searchList");
+  // sList.innerHTML = "";
+
+  let lst = document.getElementById("form");
   btncl.forEach((btn) => {
     btn.addEventListener("click", () => {
-      console.log(btn);
+      console.log("open modal");
+
+      // When the user clicks the button, open the modal
+      modal.style.display = "block";
+      let sList = document.getElementById("searchList");
+
       if (s_input.value) {
-        console.log("s", s_input.value);
-        s_input.value = "";
+        let newData = findprod(s_input.value);
+        sList.innerHTML = "";
+        newData.forEach((prod) => {
+          // console.log(prod);
+          let li = document.createElement("li");
+          li.setAttribute("class", "elemLi");
+
+          let p = document.createElement("p");
+          p.innerText = prod.name.toUpperCase();
+
+          let img = document.createElement("img");
+          img.src = prod.imgUrl;
+
+          li.addEventListener("click", () => {
+            console.log(prod);
+            window.location.href = "grocery.html";
+          });
+
+          li.append(img, p);
+          sList.append(li);
+        });
       }
 
       if (f_input.value) {
-        console.log("f", f_input.value);
-        f_input.value = "";
+        let newData = findprod(f_input.value);
+        sList.innerHTML = "";
+        newData.forEach((prod) => {
+          let li = document.createElement("li");
+          li.setAttribute("class", "elemLi");
+
+          let p = document.createElement("p");
+          p.innerText = prod.name.toUpperCase();
+
+          let img = document.createElement("img");
+          img.src = prod.imgUrl;
+
+          li.addEventListener("click", () => {
+            console.log(prod);
+            window.location.href = "grocery.html";
+          });
+
+          li.append(img, p);
+          sList.append(li);
+        });
       }
     });
   });
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+  let usrArr = JSON.parse(localStorage.getItem("mylocal")) || [];
+
+  if (usrArr.length !== 0) {
+    document.getElementById("userName").innerText = usrArr[0].name;
+  }
 </script>
 <script>
-  var cartArr = JSON.parse(localStorage.getItem("cartDatabase")) || [];
-  console.log(cartArr.length);
-
-  let data = [
-    {
-      name: "GROCERY",
-      img: "https://img.dmart.in/images/rwd/categories/aesc-grocerycore.svg",
-      subcat: "Dals,Pulses,Dry Fruits,Cooking oil etc...",
-    },
-    {
-      name: "APPLIANCES",
-      img: "https://img.dmart.in/images/rwd/categories/aesc-appliancescore.svg",
-      subcat: "Dals,Pulses,Dry Fruits,Cooking oil etc...",
-    },
-    {
-      name: "BABY & KIDS",
-      img: "https://img.dmart.in/images/rwd/categories/aesc-babyandkidscore.svg",
-      subcat: "Dals,Pulses,Dry Fruits,Cooking oil etc...",
-    },
-    {
-      name: "HOME & KITCHEN",
-      img: "https://img.dmart.in/images/rwd/categories/homkitchen15421.svg",
-      subcat: "Dals,Pulses,Dry Fruits,Cooking oil etc...",
-    },
-    {
-      name: "PERSONAL CARE",
-      img: "https://img.dmart.in/images/rwd/categories/aesc-personalcare211221.svg",
-      subcat: "Dals,Pulses,Dry Fruits,Cooking oil etc...",
-    },
-  ];
-
   function closeNav() {
     document.getElementById("mySidepanel").style.width = "0";
   }
@@ -499,9 +558,10 @@
   function allCategory() {
     window.location.href = "./allcatageory.html";
   }
+
   // window.onclick = function (e) {
-  //   if (!e.target.matches(".fa-search")) {
-  //     closeInp();
+  //   if (!e.target.matches("#searchList")) {
+  //     sList.innerHTML = "";
   //   }
   // };
 

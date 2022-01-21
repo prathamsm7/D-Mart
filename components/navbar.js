@@ -9,7 +9,7 @@ function navbar() {
       />
       <button type="submit" id="btn" class="find_btn">Search</button>
          <a href="javascript:void(0)" class="closeInp" onclick="closeInp()">&times;</a>     
-    </div>
+         </div>
    <div id="mySidepanel" class="sidepanel">
             <div id="side-top">
               <i
@@ -49,13 +49,13 @@ function navbar() {
         />
         <button type="submit" id="btn" class="find_btn">Search</button>
       </div>
-
+                
       <div id="find" onclick="openFind()">
         <span><i class="fas fa-search"></i></span>
       </div>
 
       <div id="signin">
-        <a href=""><i class="far fa-user"></i><span>Sign In/Register</span></a>
+        <a href="profile.html"><i class="far fa-user"></i><span id="userName">Sign In/Register</span></a>
       </div>
       <div id="cart">
         <a href=""> <i class="fas fa-shopping-cart"></i><sup  id="crTotal"></sup><span>Cart</span></a>
