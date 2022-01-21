@@ -135,7 +135,6 @@
         alt=""
       />
     </div>
-
     <!-- floor cleaning -->
     <div class="oDiv" id="floor"></div>
 
@@ -426,20 +425,36 @@
   let aC = document.querySelectorAll("#addCart");
   aC.forEach((btn, index) => {
     btn.addEventListener("click", () => {
-      console.log(prods[index]);
+      // console.log(prods[index]);
       cartArr.push(prods[index]);
       localStorage.setItem("cartDatabase", JSON.stringify(cartArr));
       crT();
+    });
+  });
+
+  // search function
+  let s_input = document.getElementById("search");
+  let f_input = document.querySelector(".f_input");
+  let btncl = document.querySelectorAll("#btn");
+
+  btncl.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      console.log(btn);
+      if (s_input.value) {
+        console.log("s", s_input.value);
+        s_input.value = "";
+      }
+
+      if (f_input.value) {
+        console.log("f", f_input.value);
+        f_input.value = "";
+      }
     });
   });
 </script>
 <script>
   var cartArr = JSON.parse(localStorage.getItem("cartDatabase")) || [];
   console.log(cartArr.length);
-
-  // let crt = document.getElementById("navbar");
-  // console.log(crt.lastElementChild);
-  // // // crt.innerHTML = cartArr.length;
 
   let data = [
     {
@@ -484,17 +499,11 @@
   function allCategory() {
     window.location.href = "./allcatageory.html";
   }
-
-  console.log(document.getElementById("allCate"));
-  // document.getElementById("allCate").addEventListener("click", () => {
-  //   allCategory();
-  // });
-
-  window.onclick = function (e) {
-    if (!e.target.matches(".fa-search")) {
-      closeInp();
-    }
-  };
+  // window.onclick = function (e) {
+  //   if (!e.target.matches(".fa-search")) {
+  //     closeInp();
+  //   }
+  // };
 
   var myIndex = 0;
   carousel();

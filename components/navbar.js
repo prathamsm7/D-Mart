@@ -2,9 +2,11 @@ function navbar() {
   return `
       <div id="myfind">
       <input
-              type="text"
-              placeholder="What are you looking for ?"
-            />
+      id="search"
+      class="search_input"
+      type="text"
+      placeholder="What are you looking for ?"
+      />
       <button type="submit" id="btn" class="find_btn">Search</button>
          <a href="javascript:void(0)" class="closeInp" onclick="closeInp()">&times;</a>     
     </div>
@@ -41,10 +43,11 @@ function navbar() {
       <div id="form">
         <input
           type="text"
+          class="f_input"
           id="search"
           placeholder="What are you looking for ?"
         />
-        <button type="submit" id="btn">Search</button>
+        <button type="submit" id="btn" class="find_btn">Search</button>
       </div>
 
       <div id="find" onclick="openFind()">
