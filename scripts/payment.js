@@ -1,3 +1,4 @@
+document.getElementById("nav-name").textContent = localStorage.getItem("");
 function debit() {
   document.getElementById("pay-now").innerHTML = null;
   document.getElementById("credit").style.backgroundColor = "white";
@@ -96,6 +97,8 @@ function cash() {
   btn.innerHTML = "PAY SECURELY";
 
   btn.addEventListener("click", () => {
+    alert("Please Pay After Order Get Delivered");
+
     window.location.href = "success.html";
   });
   document.getElementById("cash").style.backgroundColor = "#e4f4e8";

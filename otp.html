@@ -32,8 +32,7 @@
     event.preventDefault();
     var check = document.querySelector("#otp").value;
     if (check == "1234") {
-      localStorage.removeItem("cartData");
-      localStorage.removeItem("ads");
+      localStorage.removeItem("d-martAdd");
       window.alert("Payment Successful");
       window.location.href = "success.html";
     } else {

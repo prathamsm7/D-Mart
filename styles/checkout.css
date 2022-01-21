@@ -74,3 +74,7 @@ body {
 .or_span {
   padding-left: 40%;
 }
+#nav-name {
+  font-weight: bold;
+  font-size: 20px;
+}

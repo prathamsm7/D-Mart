@@ -23,7 +23,11 @@
   <body>
     <div id="check-nav"></div>
     <div id="pay-mode">
-      <h3>Select Payment Mode</h3>
+      <div id="price-display">
+        <h3>Select Payment Mode</h3>
+        <h3 id="p-dis"></h3>
+      </div>
+
       <div id="main-payment">
         <div id="pay-choice">
           <div id="debit" onclick="debit()">
@@ -88,3 +92,7 @@
   check_nav.innerHTML = navbar();
 </script>
 <script src="scripts/payment.js"></script>
+<script>
+  let final_amount = localStorage.getItem("cartAmount");
+  document.querySelector("#p-dis").textContent = `Total Price: ${final_amount}`;
+</script>

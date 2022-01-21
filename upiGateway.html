@@ -20,6 +20,10 @@
           <div>Merchant Name</div>
         </div>
         <div>
+          <div id="p-dis"></div>
+          <div>Amount To Pay</div>
+        </div>
+        <div>
           <div>WHD40856015233</div>
           <div>Transcation Refernce Number</div>
         </div>
@@ -42,5 +46,9 @@
     event.preventDefault();
     alert("Payment Complete");
     window.location.href = "success.html";
+    localStorage.removeItem("d-martAdd");
   });
+
+  let final_amount = +localStorage.getItem("cartAmount");
+  document.querySelector("#p-dis").innerHTML = `Rs. ${final_amount}`;
 </script>

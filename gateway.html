@@ -18,6 +18,7 @@
           <form id="myform">
             <div class="row">
               <div class="col-50">
+                <h4 id="to-pay"></h4>
                 <h3>Payment</h3>
                 <label for="fname">Accepted Cards</label>
                 <div class="icon-container">
@@ -90,6 +91,11 @@
 </html>
 <script>
   document.querySelector("#myform").addEventListener("submit", checkout);
+
+  let final_amount = +localStorage.getItem("cartAmount");
+  document.querySelector(
+    "#to-pay"
+  ).innerHTML = `Amount To Pay: ${final_amount}`;
 
   function checkout(event) {
     event.preventDefault();
