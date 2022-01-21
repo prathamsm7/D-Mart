@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <link rel="stylesheet" href="./styles/home.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <div id="navbar"></div>
+
+    <!-- Topbar -->
+    <div id="topbar"></div>
+
+    <!-- Image carousel -->
+    <div id="images"></div>
+
+    <!-- special offers  -->
+    <div id="offers" class="oDiv"></div>
+
+    <!-- monthly essential  -->
+    <div class="oDiv">
+      <p>Monthly Essentials</p>
+      <div id="mE"></div>
+    </div>
+
+    <!-- In Focus -->
+    <div id="inFocus" class="oDiv"></div>
+
+    <!-- snaks -->
+    <div class="oDiv">
+      <p>Healthy Food and Household Needs</p>
+      <div id="snaks"></div>
+    </div>
+
+    <!-- random flex image 1 -->
+    <div class="oDiv" id="random"></div>
+
+    <!-- Winter -->
+    <div class="oDiv" id="winter"></div>
+
+    <!-- health-->
+    <div class="oDiv" id="health"></div>
+
+    <!-- random flex image 2 -->
+    <div class="oDiv" id="random2">
+      <img
+        src="https://img.dmart.in/images/rwd/banners/vwctb/13cw/1jan22-curated-party.jpg"
+        alt=""
+      />
+      <img
+        src="https://img.dmart.in/images/rwd/banners/vwctb/13cw/1jan22-curated-stationery.jpg"
+        alt=""
+      />
+      <img
+        src="https://img.dmart.in/images/rwd/banners/vwctb/13cw/1jan22-curated-toys.jpg"
+        alt=""
+      />
+    </div>
+
+    <!-- random flex image 3 -->
+    <div class="oDiv" id="random3"></div>
+
+    <!-- home appliances -->
+    <div class="oDiv" id="home"></div>
+
+    <!-- random flex image 4 -->
+    <div class="oDiv" id="random4"></div>
+
+    <!-- Kitchen1 -->
+    <div class="oDiv" id="kitchen">
+      <img
+        src="https://img.dmart.in/images/rwd/banners/vwctb/12cw/1jan22-2cw-cookware.jpg"
+        alt=""
+      />
+      <img
+        src="	https://img.dmart.in/images/rwd/banners/vwctb/12cw/1jan22-2cw-cookers.jpg"
+        alt=""
+      />
+    </div>
+
+    <!-- Kitchen 2-->
+    <div class="oDiv" id="kitchen2">
+      <img
+        src="https://img.dmart.in/images/rwd/banners/vwctb/13cw/1jan22-3cw-kitchentools.jpg"
+        alt=""
+      />
+      <img
+        src="	https://img.dmart.in/images/rwd/banners/vwctb/13cw/1jan22-3cw-bottles.jpg"
+        alt=""
+      />
+      <img
+        src="https://img.dmart.in/images/rwd/banners/vwctb/13cw/1jan22-3cw-mixers.jpg"
+        alt=""
+      />
+    </div>
+
+    <!-- Kitchen 3-->
+    <div class="oDiv" id="kitchen3">
+      <img
+        src="https://img.dmart.in/images/rwd/banners/vwctb/12cw/1jan22-2cw-breakfast2.jpg"
+        alt=""
+      />
+      <img
+        src="https://img.dmart.in/images/rwd/banners/vwctb/12cw/1jan22-2cw-biscuits2.jpg"
+        alt=""
+      />
+    </div>
+
+    <!-- product cards -->
+    <div class="oDiv p_cards">
+      <p>This Week's Savers</p>
+      <div id="prod_cards"></div>
+    </div>
+
+    <!-- baby care -->
+    <div class="oDiv" id="baby">
+      <img
+        src="https://img.dmart.in/images/rwd/banners/vwctb/12cw/1jan22-2cw-diapers.jpg"
+        alt=""
+      />
+      <img
+        src="https://img.dmart.in/images/rwd/banners/vwctb/12cw/1jan22-2cw-babycare.jpg"
+        alt=""
+      />
+    </div>
+
+    <!-- floor cleaning -->
+    <div class="oDiv" id="floor"></div>
+
+    <!-- refund ad -->
+    <div class="oDiv" id="refundP">
+      <div>
+        <h2>Return And Refunds</h2>
+        <p>
+          Now shop Stress Free. Products purchased from our site can be returned
+          for a refund at any DMart Ready store within 7 days from the date of
+          the invoice provided
+        </p>
+        <button>Know More</button>
+      </div>
+      <div>
+        <img
+          src="	https://content.dmart.in/site/static/media/refunds-returns.580c0233.svg"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <!-- pets utensials -->
+    <div class="oDiv" id="pets"></div>
+
+    <!-- footer -->
+    <div id="footer"></div>
+    <hr />
+    <p id="cp">
+      Copyright © 2022 Avenue E-Commerce Limited (AEL). All Rights Reserved.
+    </p>
+  </body>
+</html>
+<script type="module">
+  import { navbar, openmenu } from "../components/navbar.js";
+  import footer from "../components/footer.js";
+  import {
+    topbar,
+    carasoul,
+    flex_Head,
+    flex_img,
+    prod_card,
+  } from "../components/topbar.js";
+
+  let nav = document.getElementById("navbar");
+  nav.innerHTML = navbar();
+
+  let ft = document.getElementById("footer");
+  ft.innerHTML = footer();
+
+  let data = [
+    {
+      name: "GROCERY",
+      img: "https://img.dmart.in/images/rwd/categories/aesc-grocerycore.svg",
+      subcat: "Dals,Pulses,Dry Fruits,Cooking oil etc...",
+    },
+    {
+      name: "APPLIANCES",
+      img: "https://img.dmart.in/images/rwd/categories/aesc-appliancescore.svg",
+      subcat: "Dals,Pulses,Dry Fruits,Cooking oil etc...",
+    },
+    {
+      name: "BABY & KIDS",
+      img: "https://img.dmart.in/images/rwd/categories/aesc-babyandkidscore.svg",
+      subcat: "Dals,Pulses,Dry Fruits,Cooking oil etc...",
+    },
+    {
+      name: "HOME & KITCHEN",
+      img: "https://img.dmart.in/images/rwd/categories/homkitchen15421.svg",
+      subcat: "Dals,Pulses,Dry Fruits,Cooking oil etc...",
+    },
+    {
+      name: "PERSONAL CARE",
+      img: "https://img.dmart.in/images/rwd/categories/aesc-personalcare211221.svg",
+      subcat: "Dals,Pulses,Dry Fruits,Cooking oil etc...",
+    },
+    {
+      name: "DAIRY & BEVERAGES",
+      img: "	https://img.dmart.in/images/rwd-mobile/categories/aesc-grocerycore.svg",
+      subcat: "Dals,Pulses,Dry Fruits,Cooking oil etc...",
+    },
+    {
+      name: "PACKAGED FOOD",
+      img: "https://img.dmart.in/images/rwd-mobile/categories/aesc-packagedfoodcore.svg",
+      subcat: "Dals,Pulses,Dry Fruits,Cooking oil etc...",
+    },
+    {
+      name: "FOOTWEAR",
+      img: "https://img.dmart.in/images/rwd-mobile/categories/aesc-footwearcore.svg",
+      subcat: "Dals,Pulses,Dry Fruits,Cooking oil etc...",
+    },
+    {
+      name: "CLOTHING",
+      img: "	https://img.dmart.in/images/rwd-mobile/categories/935201.svg",
+      subcat: "Dals,Pulses,Dry Fruits,Cooking oil etc...",
+    },
+    {
+      name: "SCHOOL SUPPLIES",
+      img: "https://img.dmart.in/images/rwd-mobile/categories/aesc-schoolsuppliescore.svg",
+      subcat: "Dals,Pulses,Dry Fruits,Cooking oil etc...",
+    },
+  ];
+
+  let menu = document.getElementById("openmenu");
+  menu.addEventListener("click", () => {
+    document.getElementById("mySidepanel").style.width = "100%";
+
+    let cate = document.getElementById("categories");
+    cate.innerHTML = "";
+    data.forEach(({ img, name, subcat }) => {
+      let image = document.createElement("img");
+      image.src = img;
+      image.setAttribute("class", "catImg");
+
+      let nm = document.createElement("p");
+      nm.innerText = name;
+
+      let desc = document.createElement("p");
+      desc.innerText = subcat;
+
+      let li = document.createElement("li");
+      li.append(image, nm);
+
+      cate.append(li);
+    });
+  });
+
+  let tb = document.getElementById("topbar");
+  tb.innerHTML = topbar();
+
+  let cr = document.getElementById("images");
+  cr.innerHTML = carasoul();
+
+  let sp_offers = document.getElementById("offers");
+
+  let o1 = flex_Head(
+    "special offers",
+    "https://img.dmart.in/images/rwd/banners/curated/15jan22-curated-dotm-mum.jpg"
+  );
+
+  let o2 = flex_img(
+    "https://img.dmart.in/images/rwd/banners/curated/15jan22-midcurated-bigpack.jpg"
+  );
+  sp_offers.innerHTML = o1;
+  sp_offers.innerHTML += o2;
+
+  let mE_Img = [
+    {
+      img: "https://img.dmart.in/images/rwd/banners/vwctb/13cw/15jan22-3cw-oil.jpg",
+    },
+    {
+      img: "https://img.dmart.in/images/rwd/banners/vwctb/13cw/15jan22-3cw-ghee.jpg",
+    },
+    {
+      img: "https://img.dmart.in/images/rwd/banners/vwctb/13cw/15jan22-3cw-spices1.jpg",
+    },
+    {
+      img: "https://img.dmart.in/images/rwd/banners/vwctb/13cw/15jan22-3cw-rice.jpg",
+    },
+    {
+      img: "https://img.dmart.in/images/rwd/banners/vwctb/13cw/15jan22-3cw-atta.jpg",
+    },
+    {
+      img: "https://img.dmart.in/images/rwd/banners/vwctb/13cw/15jan22-3cw-dryfruits.jpg",
+    },
+    {
+      img: "https://img.dmart.in/images/rwd/banners/vwctb/12cw/1jan22-2cw-fv.jpg",
+    },
+  ];
+  let monthly_ess = document.getElementById("mE");
+  mE_Img.forEach(({ img }) => {
+    monthly_ess.innerHTML += flex_img(img);
+  });
+
+  let inFocus = document.getElementById("inFocus");
+  inFocus.innerHTML = flex_Head(
+    "In Focus",
+    "https://img.dmart.in/images/rwd/banners/curated/28dec21-curated-beautystore.jpg"
+  );
+
+  let random = document.getElementById("random");
+  random.innerHTML = flex_img(
+    "https://img.dmart.in/images/rwd/banners/curated/18dec21-curated-finestfew.jpg"
+  );
+
+  let random3 = document.getElementById("random3");
+  random3.innerHTML = flex_img("images/cloths.png");
+
+  let random4 = document.getElementById("random4");
+  random4.innerHTML = flex_img(
+    "https://img.dmart.in/images/rwd/banners/curated/15jan22-curated-electronics.jpg"
+  );
+
+  let floor = document.getElementById("floor");
+  floor.innerHTML = flex_img("images/floor.png");
+
+  let pets = document.getElementById("pets");
+  pets.innerHTML = flex_img("images/pets.png");
+
+  // snaks
+  let snaks_img = [
+    {
+      img: "images/sn1.PNG",
+    },
+    {
+      img: "images/sn2.PNG",
+    },
+    {
+      img: "images/sn3.PNG",
+    },
+    {
+      img: "images/sn4.PNG",
+    },
+    {
+      img: "images/sn5.PNG",
+    },
+    {
+      img: "images/sn6.PNG",
+    },
+  ];
+  let snaks = document.getElementById("snaks");
+  snaks_img.forEach(({ img }) => {
+    snaks.innerHTML += flex_img(img);
+  });
+
+  let winter = document.getElementById("winter");
+  winter.innerHTML = flex_Head("Winter Special", "images/winter1.PNG");
+
+  let health = document.getElementById("health");
+  health.innerHTML = flex_Head(
+    "Stay Safe from Scams",
+    "https://img.dmart.in/images/rwd/banners/curated/1-jun-2021-curated-phishing-3.jpg"
+  );
+
+  let home = document.getElementById("home");
+  home.innerHTML = flex_Head(
+    "Transform Your Home",
+    "https://img.dmart.in/images/rwd/banners/curated/4nov21-curated-homedecor.jpg"
+  );
+
+  // Prod cards
+
+  let prods = [
+    {
+      nams: "Veda Prash Premium Jaggery Chyawanprash : 475 gms",
+      img: "https://img.dmart.in/images/rwd/products/J/A/N/JAN120005349xx11JAN22_5_P.jpg",
+      mrp: "₹899",
+      sp: "₹680",
+      sv: "₹219",
+    },
+    {
+      nams: "Mahalaxmi Pista Peanut Chikki : 500 gms",
+      img: "https://img.dmart.in/images/rwd/products/D/E/C/DEC120005306xx13DEC21_5_P.jpg",
+      mrp: "₹280",
+      sp: "₹140",
+      sv: "₹140",
+    },
+    {
+      nams: "Kellogg's Corn Flakes Original : 875 gms",
+      img: "https://img.dmart.in/images/rwd/products/I/C/o/ICornFlakes875gKMST1256xx310521_5_P.jpg",
+      mrp: "₹310",
+      sp: "₹199",
+      sv: "₹111",
+    },
+    {
+      nams: "Saffola Immuniveda Chyawanprash : 1.25 kgs",
+      img: "https://img.dmart.in/images/rwd/products/D/E/C/DEC120004044xx18DEC21_5_P.jpg",
+      mrp: "₹525",
+      sp: "₹262",
+      sv: "₹263",
+    },
+  ];
+
+  let prod_cards = document.getElementById("prod_cards");
+
+  prods.forEach((elem, index) => {
+    let { img, nams, mrp, sp, sv } = elem;
+    prod_cards.innerHTML += prod_card(img, nams, mrp, sp, sv, elem);
+  });
+
+  var cartArr = JSON.parse(localStorage.getItem("cartDatabase")) || [];
+
+  crT();
+  function crT() {
+    document.getElementById("crTotal").innerText = cartArr.length;
+  }
+
+  let aC = document.querySelectorAll("#addCart");
+  aC.forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+      console.log(prods[index]);
+      cartArr.push(prods[index]);
+      localStorage.setItem("cartDatabase", JSON.stringify(cartArr));
+      crT();
+    });
+  });
+</script>
+<script>
+  var cartArr = JSON.parse(localStorage.getItem("cartDatabase")) || [];
+  console.log(cartArr.length);
+
+  // let crt = document.getElementById("navbar");
+  // console.log(crt.lastElementChild);
+  // // // crt.innerHTML = cartArr.length;
+
+  let data = [
+    {
+      name: "GROCERY",
+      img: "https://img.dmart.in/images/rwd/categories/aesc-grocerycore.svg",
+      subcat: "Dals,Pulses,Dry Fruits,Cooking oil etc...",
+    },
+    {
+      name: "APPLIANCES",
+      img: "https://img.dmart.in/images/rwd/categories/aesc-appliancescore.svg",
+      subcat: "Dals,Pulses,Dry Fruits,Cooking oil etc...",
+    },
+    {
+      name: "BABY & KIDS",
+      img: "https://img.dmart.in/images/rwd/categories/aesc-babyandkidscore.svg",
+      subcat: "Dals,Pulses,Dry Fruits,Cooking oil etc...",
+    },
+    {
+      name: "HOME & KITCHEN",
+      img: "https://img.dmart.in/images/rwd/categories/homkitchen15421.svg",
+      subcat: "Dals,Pulses,Dry Fruits,Cooking oil etc...",
+    },
+    {
+      name: "PERSONAL CARE",
+      img: "https://img.dmart.in/images/rwd/categories/aesc-personalcare211221.svg",
+      subcat: "Dals,Pulses,Dry Fruits,Cooking oil etc...",
+    },
+  ];
+
+  function closeNav() {
+    document.getElementById("mySidepanel").style.width = "0";
+  }
+
+  function openFind() {
+    document.getElementById("myfind").style.height = "60px";
+  }
+
+  function closeInp() {
+    document.getElementById("myfind").style.height = "0";
+  }
+
+  function allCategory() {
+    window.location.href = "./allcatageory.html";
+  }
+
+  console.log(document.getElementById("allCate"));
+  // document.getElementById("allCate").addEventListener("click", () => {
+  //   allCategory();
+  // });
+
+  window.onclick = function (e) {
+    if (!e.target.matches(".fa-search")) {
+      closeInp();
+    }
+  };
+
+  var myIndex = 0;
+  carousel();
+
+  function carousel() {
+    var i;
+    var x = document.getElementById("images");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {
+      myIndex = 1;
+    }
+    x[myIndex - 1].style.display = "block";
+    setTimeout(carousel, 4000); // Change image every 2 seconds
+  }
+</script>
