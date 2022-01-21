@@ -114,3 +114,24 @@ input[type="submit"] {
     display: inline;
   }
 }
+@media only screen and (min-width: 0px) and (max-width: 375px) {
+  .in-flex {
+    display: inline;
+  }
+  .in-flex > div {
+    width: 100%;
+  }
+  .wrapper {
+    width: 80%;
+    overflow: scroll;
+  }
+  .container {
+    height: 400px;
+  }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+  .wrapper {
+    width: 65%;
+  }
+}
