@@ -15,6 +15,44 @@
     />
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
+  <style>
+    #check-price h3 {
+      margin: 15px;
+    }
+    #check-price > div {
+      display: flex;
+      justify-content: space-between;
+      margin: 15px;
+    }
+    .hr {
+      margin: 15px;
+    }
+    #btn-del,
+    #btn-pay {
+      margin-top: 5%;
+      width: 100%;
+      padding: 2% 5%;
+      font-size: 15px;
+      font-weight: bold;
+      background-color: #25a541;
+      border: 0;
+      border-radius: 4px;
+      color: white;
+    }
+    #btn-del:hover,
+    #btn-pay:hover {
+      cursor: pointer;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    #btn-pay {
+      background-color: white;
+      color: #25a541;
+      border: 1px solid #25a541;
+    }
+    .or_span {
+      padding-left: 40%;
+    }
+  </style>
   <body>
     <div id="check-nav"></div>
     <div id="check-main">
@@ -26,7 +64,9 @@
           <hr />
           <div>
             <div>Cart Total</div>
-            <div id="sub-total">Rs.</div>
+            <div>
+              <p>Rs.<label id="sub-total"></label></p>
+            </div>
           </div>
           <hr class="hr" />
           <div>
@@ -36,14 +76,14 @@
           <hr class="hr" />
           <div>
             <div>Total Amount</div>
-            <div id="amount">Rs.</div>
+            <p>Rs.<label id="amount"></label></p>
           </div>
           <hr class="hr" />
-          <!-- <div>
+          <div>
             <div>Total Savings</div>
-            <div>Rs.196</div>
+            <div>Rs.50</div>
           </div>
-          <hr class="hr" /> -->
+          <hr class="hr" />
 
           <button id="btn-del">CASH/CARD ON DELIVERY</button>
           <div class="or_span">OR</div>
