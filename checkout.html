@@ -61,7 +61,7 @@
   </body>
 </html>
 <script type="module">
-  import { navbar } from "./components/navbar.js";
+  import { navbar } from "./components/navbar-pay.js";
   import { address } from "./components/address.js";
   let check_nav = document.getElementById("check-nav");
   let add_address = document.getElementById("check-address");
@@ -70,7 +70,8 @@
 
   document.getElementById("logo-click").addEventListener("click", () => {
     window.location.href = "index.html";
-    // document.getElementById("nav-name").textContent = localStorage.getItem("");
+    document.getElementById("nav-name").textContent =
+      localStorage.getItem("mylocal_2");
   });
   document.getElementById("add-form").addEventListener("submit", (event) => {
     event.preventDefault();

@@ -1,4 +1,5 @@
-document.getElementById("nav-name").textContent = localStorage.getItem("");
+document.getElementById("nav-name").textContent =
+  localStorage.getItem("mylocal_2");
 function debit() {
   document.getElementById("pay-now").innerHTML = null;
   document.getElementById("credit").style.backgroundColor = "white";
