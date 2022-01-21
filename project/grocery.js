@@ -421,7 +421,7 @@ var oils=[{
         strikedOffPrice:420
     }]
 dou(data)
-cart= JSON.parse(localStorage.getItem("cartItems"))||[];
+cart= JSON.parse(localStorage.getItem("cartdatabase"))||[];
 function dou(data){ 
    document.querySelector("#dal").style.color="black"
    document.querySelector("#pulses").style.color="black"
@@ -488,7 +488,7 @@ saveprice.style.marginTop="-15px"
     document.getElementById("con").append(mainDiv)
     but.addEventListener("click", function () {
         cart.push(elem);
-        localStorage.setItem("cartItems", JSON.stringify(cart))
+        localStorage.setItem("cartdatabase", JSON.stringify(cart))
         console.log(cart)
    })
 })};

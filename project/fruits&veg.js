@@ -194,7 +194,7 @@ var vegetable=[{
     strikedOffPrice:25
 },];
 dou(data)
-cart= JSON.parse(localStorage.getItem("cartItems"))||[];
+cart= JSON.parse(localStorage.getItem("cartdatabase"))||[];
 function dou(data){ 
    document.querySelector("#fruits").style.color="black"
    document.querySelector("#vegetables").style.color="black"
@@ -258,7 +258,7 @@ saveprice.style.marginTop="-15px"
     document.getElementById("con").append(mainDiv)
     but.addEventListener("click", function () {
         cart.push(elem);
-        localStorage.setItem("cartItems", JSON.stringify(cart))
+        localStorage.setItem("cartdatabase", JSON.stringify(cart))
         console.log(cart)
    })
 })};

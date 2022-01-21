@@ -354,7 +354,7 @@ var beds=[{
     strikedOffPrice:609
 }];
 dou(data)
-cart= JSON.parse(localStorage.getItem("cartItems"))||[];
+cart= JSON.parse(localStorage.getItem("cartdatabase"))||[];
 function dou(data){ 
     document.querySelector("#detergent").style.color="black"
     document.querySelector("#cleaners").style.color="black"
@@ -415,7 +415,7 @@ saveprice.style.marginTop="-15px"
    document.getElementById("con").append(mainDiv)
    but.addEventListener("click", function () {
        cart.push(elem);
-       localStorage.setItem("cartItems", JSON.stringify(cart))
+       localStorage.setItem("cartdatabase", JSON.stringify(cart))
        
    })
 })};

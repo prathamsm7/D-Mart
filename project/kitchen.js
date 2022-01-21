@@ -199,7 +199,7 @@ var personals=[{
     strikedOffPrice:845
 }];
 dou(data)
-cart= JSON.parse(localStorage.getItem("cartItems"))||[];
+cart= JSON.parse(localStorage.getItem("cartdatabase"))||[];
 function dou(data){ 
     document.querySelector("#home").style.color="black"
     document.querySelector("#personal").style.color="black"
@@ -256,7 +256,7 @@ saveprice.style.marginTop="-15px"
    document.getElementById("con").append(mainDiv)
    but.addEventListener("click", function () {
        cart.push(elem);
-       localStorage.setItem("cartItems", JSON.stringify(cart))
+       localStorage.setItem("cartdatabase", JSON.stringify(cart))
        
    })
 })};
