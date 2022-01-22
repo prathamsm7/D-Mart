@@ -76,7 +76,7 @@ a:hover {
   width: auto;
   font-family: "Mulish", sans-serif;
 }
-img {
+#con img {
   width: 65%;
   cursor: pointer;
   padding-left: 32%;
@@ -149,7 +149,7 @@ body {
 }
 #cat {
   display: flex;
-  width: 100%;
+  /* width: 100%; */
   padding-left: 10%;
   box-shadow: 0px 2px 0px 0px #888888;
   font-family: "Mulish", sans-serif;

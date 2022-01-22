@@ -336,6 +336,8 @@ function dou(data) {
     but.addEventListener("click", function () {
       cart.push(elem);
       localStorage.setItem("cartDatabase", JSON.stringify(cart));
+      document.getElementById("crTotal").innerText = cart.length;
+
       console.log(cart);
     });
   });
