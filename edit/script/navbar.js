@@ -3,7 +3,7 @@ function navbar() {
    
     <div id="logo">
         <img
-          src="https://github.com/prathamsm7/D-Mart/blob/prathamesh/images/logo.jpg?raw=true"
+          src="images/logo.png"
           alt="logo"
         />
       </div>

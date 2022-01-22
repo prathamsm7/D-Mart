@@ -22,7 +22,7 @@ function footer(){
         </div>
     </div>
     <div id="l"></div>
-    <div id="bottom">Copyright © 2022 Avenue E-Commerce Limited (AEL). All Rights Reserved.</div>`;
+    `;
 
 }
 

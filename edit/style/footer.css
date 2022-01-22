@@ -108,6 +108,98 @@
     border: 0.5px solid black;
 }
 #bottom{
+    grid-area: bt;
     margin-left: 450px;
     margin-top: 20px;
 }
+
+/* @media only screen and (min-width:375px) and (max-width:768px){
+    #footer{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,200px);
+        grid-template-areas: "one one"
+        "two two"
+        "three three";
+    }
+}
+
+@media only screen and (min-width:0px) and (max-width:375px){
+    #footer{
+        width:100%;
+        grid-template-columns: repeat(12,1fr);
+        grid-template-rows: 200px 200px 50px;
+        grid-template-areas: "one one one one one one one one one one one one"
+                             "two two two two two two three three three three three three"
+                             "bt bt bt bt bt bt bt bt bt bt bt bt";
+                            
+    }
+
+} */
+
+@media (min-width: 340px) and (max-width: 820px) {
+    #footer {
+      display: block;
+      /* grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: "one two three"; */
+      margin-top: 50px;
+      border-top: 1px solid gray;
+    }
+    #f_one {
+      width: 100%;
+      margin: auto;
+      text-align: center;
+    }
+    #gp_apl {
+      display: grid;
+      grid-template-columns: repeat(2, 200px);
+      grid-template-areas: "g a";
+      grid-gap: 20px;
+      justify-content: center;
+    }
+    #small_img {
+      display: grid;
+      grid-template-columns: repeat(5, 50px);
+      grid-template-areas: "a1 a2 a3 a4 a5";
+      margin-left: 45px;
+      margin-top: 20px;
+      justify-content: center;
+    }
+    #f_two,
+    #f_three {
+      margin-left: 20%;
+    }
+  }
+  
+  @media (min-width: 0px) and (max-width: 376px) {
+    #footer {
+        display: block;
+        /* grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "one two three"; */
+        margin-top: 50px;
+        border-top: 1px solid gray;
+      }
+      #f_one {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+      }
+      #gp_apl {
+        display: grid;
+        grid-template-columns: repeat(2, 200px);
+        grid-template-areas: "g a";
+        grid-gap: 20px;
+        justify-content: center;
+      }
+      #small_img {
+        display: grid;
+        grid-template-columns: repeat(5, 50px);
+        grid-template-areas: "a1 a2 a3 a4 a5";
+        margin-left: 45px;
+        margin-top: 20px;
+        justify-content: center;
+      }
+      #f_two,
+      #f_three {
+        margin-left: 20%;
+      }
+    }

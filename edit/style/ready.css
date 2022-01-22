@@ -1,7 +1,7 @@
 #left{
-    height:500px;
+    height:250px;
     width:250px;
-    border:2px solid rgb(204, 211, 204);
+    border:2px solid transparent;
 }
 /* #ftr3{
     height:300px;
@@ -70,4 +70,41 @@
     font-size: 16px;
     color:green;
     margin-right: 10px;
+}
+@media only screen and (min-width:375px) and (max-width:768px){
+    #center{
+        
+        display: inline;
+    }
+    #left{
+        margin-top: 200px;
+    }
+    #block{
+        height:500px;
+        width :500px;
+        border: 1px solid transparent;
+        margin-left: 10px;
+        
+    
+    }
+    
+}
+
+@media only screen and (min-width:0px) and (max-width:375px){
+    #center{
+        
+        display: inline;
+    }
+    #left{
+        margin-top: 200px;
+    }
+    #block{
+        height:500px;
+        width :400px;
+        border: 1px solid transparent;
+        margin-left: 10px;
+        
+    
+    }
+    
 }
