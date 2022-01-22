@@ -30,7 +30,7 @@ function navbar() {
         <i class="fas fa-bars" id="openmenu"></i>
       </div>
     <div id="logo">
-    <a href="home.html">
+    <a href="index.html">
     <img
     src="./images/logo.jpg"
     alt="logo"
@@ -49,11 +49,9 @@ function navbar() {
         />
         <button type="submit" id="btn" class="find_btn">Search</button>
       </div>
-
       <div id="find" onclick="openFind()">
         <span><i class="fas fa-search"></i></span>
       </div>
-
       <div id="signin">
         <a href=""><i class="far fa-user"></i><span>Sign In/Register</span></a>
       </div>
