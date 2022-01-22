@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./styles/navbar.css" />
     <link rel="stylesheet" href="./styles/index.css" />
     <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="stylesheet" href="./styles/search.css" />
 
     <title>Document</title>
     <style>
@@ -42,6 +43,15 @@
   </head>
   <body>
     <div id="navbar"></div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <ul id="searchList"></ul>
+      </div>
+    </div>
     <div id="topbar"></div>
 
     <div id="gnanendra">
@@ -244,6 +254,7 @@
   import { navbar, openmenu } from "../components/navbar.js";
   import { topbar } from "../components/topbar.js";
   import openMenu from "../scripts/main.js";
+  import { findprod, appendProdData } from "../components/search.js";
 
   import footer from "../components/footer.js";
 
@@ -332,43 +343,94 @@
       cate.append(li);
     });
   });
+
+  // search function
+  let s_input = document.getElementById("search");
+  let f_input = document.querySelector(".f_input");
+  let btncl = document.querySelectorAll("#btn");
+
+  var modal = document.getElementById("myModal");
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  let sList = document.getElementById("searchList");
+  // sList.innerHTML = "";
+
+  let lst = document.getElementById("form");
+  btncl.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      console.log("open modal");
+
+      // When the user clicks the button, open the modal
+      modal.style.display = "block";
+      let sList = document.getElementById("searchList");
+
+      if (s_input.value) {
+        let newData = findprod(s_input.value);
+        sList.innerHTML = "";
+        newData.forEach((prod) => {
+          // console.log(prod);
+          let li = document.createElement("li");
+          li.setAttribute("class", "elemLi");
+
+          let p = document.createElement("p");
+          p.innerText = prod.name.toUpperCase();
+
+          let img = document.createElement("img");
+          img.src = prod.imgUrl;
+
+          li.addEventListener("click", () => {
+            console.log(prod);
+            window.location.href = "grocery.html";
+          });
+
+          li.append(img, p);
+          sList.append(li);
+        });
+      }
+
+      if (f_input.value) {
+        let newData = findprod(f_input.value);
+        sList.innerHTML = "";
+        newData.forEach((prod) => {
+          let li = document.createElement("li");
+          li.setAttribute("class", "elemLi");
+
+          let p = document.createElement("p");
+          p.innerText = prod.name.toUpperCase();
+
+          let img = document.createElement("img");
+          img.src = prod.imgUrl;
+
+          li.addEventListener("click", () => {
+            console.log(prod);
+            window.location.href = "grocery.html";
+          });
+
+          li.append(img, p);
+          sList.append(li);
+        });
+      }
+    });
+  });
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+  let usrArr = JSON.parse(localStorage.getItem("mylocal")) || [];
+
+  if (usrArr.length !== 0) {
+    document.getElementById("userName").innerText = usrArr[0].name;
+  }
 </script>
 <script>
-  var cartArr = JSON.parse(localStorage.getItem("cartDatabase")) || [];
-  console.log(cartArr.length);
-
-  // let crt = document.getElementById("navbar");
-  // console.log(crt.lastElementChild);
-  // // // crt.innerHTML = cartArr.length;
-
-  let data = [
-    {
-      name: "GROCERY",
-      img: "https://img.dmart.in/images/rwd/categories/aesc-grocerycore.svg",
-      subcat: "Dals,Pulses,Dry Fruits,Cooking oil etc...",
-    },
-    {
-      name: "APPLIANCES",
-      img: "https://img.dmart.in/images/rwd/categories/aesc-appliancescore.svg",
-      subcat: "Dals,Pulses,Dry Fruits,Cooking oil etc...",
-    },
-    {
-      name: "BABY & KIDS",
-      img: "https://img.dmart.in/images/rwd/categories/aesc-babyandkidscore.svg",
-      subcat: "Dals,Pulses,Dry Fruits,Cooking oil etc...",
-    },
-    {
-      name: "HOME & KITCHEN",
-      img: "https://img.dmart.in/images/rwd/categories/homkitchen15421.svg",
-      subcat: "Dals,Pulses,Dry Fruits,Cooking oil etc...",
-    },
-    {
-      name: "PERSONAL CARE",
-      img: "https://img.dmart.in/images/rwd/categories/aesc-personalcare211221.svg",
-      subcat: "Dals,Pulses,Dry Fruits,Cooking oil etc...",
-    },
-  ];
-
   function closeNav() {
     document.getElementById("mySidepanel").style.width = "0";
   }
