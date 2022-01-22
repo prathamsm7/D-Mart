@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment GateWay</title>
+    <link rel="icon" type="image/png" href="./images/icon.png" />
+    <link rel="stylesheet" href="styles/checkout.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/01d54b8bb8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles/payment.css" />
+  </head>
+  <style></style>
+  <body>
+    <div id="check-nav"></div>
+    <div id="pay-mode">
+      <div id="price-display">
+        <h3>Select Payment Mode</h3>
+        <h3 id="p-dis"></h3>
+      </div>
+
+      <div id="main-payment">
+        <div id="pay-choice">
+          <div id="debit" onclick="debit()">
+            <div>
+              <div>
+                <i class="fas fa-credit-card fa-lg"></i>
+              </div>
+              <div>Debit Card</div>
+            </div>
+            <div><i class="fas fa-arrow-right"></i></div>
+          </div>
+
+          <div id="credit" onclick="credit()">
+            <div>
+              <div>
+                <i class="fas fa-credit-card fa-lg"></i>
+              </div>
+              <div>Credit Card</div>
+            </div>
+            <div><i class="fas fa-arrow-right"></i></div>
+          </div>
+
+          <div id="upi-div" onclick="upi()">
+            <div>
+              <div>
+                <img src="images/upi.png" alt="" id="upi" />
+              </div>
+              <div>UPI/BHIM</div>
+            </div>
+            <div><i class="fas fa-arrow-right"></i></div>
+          </div>
+
+          <div id="cash" onclick="cash()">
+            <div>
+              <div>
+                <i class="fas fa-money-bill-wave fa-lg"></i>
+              </div>
+              <div>Cash/Card On Delivery</div>
+            </div>
+            <div><i class="fas fa-arrow-right"></i></div>
+          </div>
+
+          <!-- <div><i class="far fa-credit-card fa-lg"></i>Credit Card</div> -->
+
+          <!-- <div>
+            <img src="images/upi.png" alt="" id="upi" /> UPI(GPay,PhonePe,etc)
+          </div>
+          <hr /> -->
+          <!-- <div>
+            <i class="fas fa-money-bill-wave fa-lg"></i>Cash/Card On Delivery
+          </div>
+          <hr /> -->
+        </div>
+        <div id="pay-now"></div>
+      </div>
+    </div>
+  </body>
+</html>
+<script type="module">
+  import { navbar } from "./components/navbar-pay.js";
+  let check_nav = document.getElementById("check-nav");
+  check_nav.innerHTML = navbar();
+</script>
+<script src="scripts/payment.js"></script>
+<script>
+  let final_amount = localStorage.getItem("cartAmount");
+  document.querySelector("#p-dis").textContent = `Total Price: ${final_amount}`;
+</script>

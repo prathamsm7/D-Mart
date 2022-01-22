@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You</title>
+    <link rel="stylesheet" href="styles/checkout.css" />
+  </head>
+  <body>
+    <div id="check-nav"></div>
+    <div id="thanks-div">
+      <h1>Thank You For Purchasing</h1>
+      <h2>Order Placed</h2>
+      <img
+        id="thanks-img"
+        src="https://c.tenor.com/Hw7f-4l0zgEAAAAM/check-green.gif"
+        alt="check"
+      />
+    </div>
+  </body>
+</html>
+<script type="module">
+  import { navbar } from "./components/navbar-pay.js";
+  let check_nav = document.getElementById("check-nav");
+  check_nav.innerHTML = navbar();
+
+  document.getElementById("logo-click").addEventListener("click", () => {
+    window.location.href = "index.html";
+  });
+  document.getElementById("nav-name").textContent =
+    localStorage.getItem("mylocal_2");
+</script>

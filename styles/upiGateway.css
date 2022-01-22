@@ -1,0 +1,59 @@
+body {
+  background-color: #243745;
+}
+#nav-upi {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f2f0f0;
+}
+img {
+  width: 100px;
+  padding: 10px;
+}
+#container {
+  width: 70%;
+  margin: auto;
+  margin-top: 5%;
+  background-color: white;
+}
+#pay-details {
+  display: flex;
+  justify-content: space-between;
+}
+#pay-details > div > div:nth-child(1) {
+  font-size: 20px;
+}
+#pay-details > div {
+  padding: 20px;
+}
+input[type="email"] {
+  width: 25%;
+  padding: 10px 20px;
+  font-size: 20px;
+}
+#make-pay {
+  padding: 20px;
+}
+input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #f0c455;
+  border: 0;
+  border-radius: 4px;
+  font-size: 16px;
+}
+#container > div:last-child {
+  margin-left: 40%;
+  padding: 1% 0 2% 0;
+}
+input[type="submit"]:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
+}
+@media only screen and (min-width: 0px) and (max-width: 375px) {
+  #container {
+    width: 100%;
+  }
+  input[type="email"] {
+    width: 80%;
+  }
+}

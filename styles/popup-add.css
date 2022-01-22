@@ -1,0 +1,137 @@
+.overlay {
+  position: fixed;
+  top: -50px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+.wrapper {
+  margin: 70px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 5px;
+  width: 50%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+.wrapper h2 {
+  margin-top: 0;
+  color: #333;
+}
+.wrapper .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Mulish", sans-serif;
+  text-decoration: none;
+  color: #333;
+}
+.wrapper .close:hover {
+  color: #06d85f;
+}
+.wrapper .content {
+  max-height: 30%;
+  overflow: auto;
+}
+/*form*/
+
+.container {
+  border-radius: 5px;
+  background-color: transparent;
+  padding: 20px 0;
+}
+form label {
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+form > div:last-child {
+  text-align: center;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  resize: vertical;
+  font-family: "Mulish", sans-serif;
+}
+input[type="submit"] {
+  background-color: #54a541;
+  color: #fff;
+  padding: 15px 50px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: "Mulish", sans-serif;
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+#main-cart-price {
+  display: grid;
+  grid-template-columns: 60% 25%;
+  justify-content: space-between;
+  /* border: 1px solid grey; */
+}
+#check-address,
+#check-price {
+  border: 1px solid silver;
+}
+#add-address {
+  color: #54a541;
+}
+#add-address:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.in-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.in-flex > div {
+  width: 45%;
+}
+@media only screen and (min-width: 0px) and (max-width: 375px) {
+  #main-cart-price {
+    display: inline;
+  }
+}
+@media only screen and (min-width: 376px) and (max-width: 768px) {
+  #main-cart-price {
+    display: inline;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 375px) {
+  .in-flex {
+    display: inline;
+  }
+  .in-flex > div {
+    width: 100%;
+  }
+  .wrapper {
+    width: 80%;
+    overflow: scroll;
+  }
+  .container {
+    height: 400px;
+  }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+  .wrapper {
+    width: 65%;
+  }
+}

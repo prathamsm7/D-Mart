@@ -1,0 +1,82 @@
+#main-payment {
+  display: grid;
+  grid-template-columns: 25% 60%;
+  height: 500px;
+  /* border: 1px solid grey; */
+}
+#pay-choice,
+#pay-now {
+  border: 1px solid silver;
+}
+#upi {
+  width: 20px;
+}
+i {
+  color: #25a541;
+}
+#pay-choice > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  text-align: right;
+  border: 1px solid silver;
+}
+#pay-choice > div > div:nth-child(1) {
+  display: flex;
+  gap: 10px;
+}
+#pay-choice > div:hover {
+  background-color: #e4f4e8;
+  cursor: pointer;
+  color: #25a541;
+}
+#secure-img {
+  margin-top: 10%;
+  width: 30%;
+}
+#pay-now {
+  text-align: center;
+}
+#btn-debit,
+#btn-credit,
+#btn-upi,
+#btn-cash {
+  margin-top: 2%;
+  padding: 10px 20px;
+  color: white;
+  background-color: #25a541;
+  border: 0;
+  border-radius: 4px;
+  font-weight: bold;
+}
+#btn-debit:hover,
+#btn-credit:hover,
+#btn-upi:hover,
+#btn-cash:hover {
+  border: 1px solid #25a541;
+  color: #25a541;
+  background-color: white;
+  cursor: pointer;
+}
+#price-display {
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (min-width: 0px) and (max-width: 375px) {
+  #main-payment {
+    display: inline;
+    width: 100%;
+  }
+  #pay-now {
+    height: 300px;
+  }
+}
+@media only screen and (min-width: 376px) and (max-width: 768px) {
+  #main-payment {
+    display: inline;
+    width: 100%;
+  }
+  #pay-now {
+    height: 500px;
+  }
+}

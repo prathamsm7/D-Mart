@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DMart Ready</title>
+    <link rel="icon" type="image/png" href="./images/icon.png" />
+    <link rel="stylesheet" href="styles/checkout.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/popup-add.css" />
+  </head>
+  <style>
+    #check-price > div > div:nth-child(2) {
+      font-weight: bold;
+    }
+  </style>
+  <body>
+    <div id="check-nav"></div>
+    <div id="check-main">
+      <h3>Checkout</h3>
+      <div id="main-cart-price">
+        <div id="check-address"></div>
+        <div id="check-price">
+          <h3>Price Summary</h3>
+          <hr />
+          <div>
+            <div>Cart Total</div>
+            <div id="sub-total">Rs.</div>
+          </div>
+          <hr class="hr" />
+          <div>
+            <div>Delivery Charge</div>
+            <div style="color: crimson; font-weight: bold">Rs.50</div>
+          </div>
+          <hr class="hr" />
+          <div>
+            <div>Total Amount</div>
+            <div id="amount">Rs.</div>
+          </div>
+          <hr class="hr" />
+          <div>
+            <div>Total Savings</div>
+            <div style="color: #3da13c; font-weight: bold" id="total-save">
+              Rs.
+            </div>
+          </div>
+          <hr class="hr" />
+
+          <button id="btn-del">CASH/CARD ON DELIVERY</button>
+          <div class="or_span">OR</div>
+          <button id="btn-pay">PAY ONLINE</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script type="module">
+  import { navbar } from "./components/navbar-pay.js";
+  import { address } from "./components/address.js";
+  let check_nav = document.getElementById("check-nav");
+  let add_address = document.getElementById("check-address");
+  check_nav.innerHTML = navbar();
+  add_address.innerHTML = address();
+
+  document.getElementById("logo-click").addEventListener("click", () => {
+    window.location.href = "index.html";
+    document.getElementById("nav-name").textContent =
+      localStorage.getItem("mylocal_2");
+  });
+  document.getElementById("add-form").addEventListener("submit", (event) => {
+    event.preventDefault();
+    let show_add = document.getElementById("check-address");
+    let div = document.createElement("h3");
+    let detail_div = document.createElement("div");
+    let name = document.getElementById("add-name").value;
+
+    let detail =
+      document.getElementById("add-one").value +
+      ", " +
+      document.getElementById("add-area").value +
+      ", " +
+      document.getElementById("add-land").value +
+      ", " +
+      document.getElementById("add-two").value +
+      "-" +
+      document.getElementById("add-pin").value;
+    div.innerHTML = name;
+
+    localStorage.setItem("d-martAdd", detail);
+    detail_div.innerHTML = detail;
+    show_add.append(div, detail_div);
+    window.location.href = "#";
+  });
+</script>
+<script>
+  let cart_total = +localStorage.getItem("subTotal");
+  let total_save = Math.floor((cart_total * 30) / 100);
+  let final_amount = +localStorage.getItem("cartAmount");
+  document.getElementById("btn-pay").addEventListener("click", () => {
+    let address_check = localStorage.getItem("d-martAdd");
+    if (address_check === null) {
+      alert("Please Add Address");
+    } else {
+      window.location.href = "payment.html";
+    }
+  });
+  document.getElementById("btn-del").addEventListener("click", () => {
+    let address_check = localStorage.getItem("d-martAdd");
+    if (address_check === null) {
+      alert("Please Add Address");
+    } else {
+      window.location.href = "success.html";
+      localStorage.removeItem("d-martAdd");
+    }
+  });
+  document.querySelector("#amount").textContent = `Rs. ${final_amount}`;
+  document.querySelector("#sub-total").textContent = `Rs. ${cart_total}`;
+  document.getElementById("total-save").innerHTML = `Rs. ${total_save}`;
+</script>

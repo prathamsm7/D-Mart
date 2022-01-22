@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DMart Ready</title>
+    <link rel="icon" type="image/png" href="./images/icon.png" />
+    <link rel="stylesheet" href="styles/checkout.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/popup-add.css" />
+  </head>
+  <style>
+    #check-price h3 {
+      margin: 15px;
+    }
+    #check-price > div {
+      display: flex;
+      justify-content: space-between;
+      margin: 15px;
+    }
+    .hr {
+      margin: 15px;
+    }
+    #btn-del,
+    #btn-pay {
+      margin-top: 5%;
+      width: 100%;
+      padding: 2% 5%;
+      font-size: 15px;
+      font-weight: bold;
+      background-color: #25a541;
+      border: 0;
+      border-radius: 4px;
+      color: white;
+    }
+    #btn-del:hover,
+    #btn-pay:hover {
+      cursor: pointer;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    #btn-pay {
+      background-color: white;
+      color: #25a541;
+      border: 1px solid #25a541;
+    }
+    .or_span {
+      padding-left: 40%;
+    }
+  </style>
+  <body>
+    <div id="check-nav"></div>
+    <div id="check-main">
+      <h3>Checkout</h3>
+      <div id="main-cart-price">
+        <div id="check-address"></div>
+        <div id="check-price">
+          <h3>Price Summary</h3>
+          <hr />
+          <div>
+            <div>Cart Total</div>
+            <div>
+              <p>Rs.<label id="sub-total"></label></p>
+            </div>
+          </div>
+          <hr class="hr" />
+          <div>
+            <div>Delivery Charge</div>
+            <div>Rs.50</div>
+          </div>
+          <hr class="hr" />
+          <div>
+            <div>Total Amount</div>
+            <p>Rs.<label id="amount"></label></p>
+          </div>
+          <hr class="hr" />
+          <div>
+            <div>Total Savings</div>
+            <div>Rs.50</div>
+          </div>
+          <hr class="hr" />
+
+          <button id="btn-del">CASH/CARD ON DELIVERY</button>
+          <div class="or_span">OR</div>
+          <button id="btn-pay">PAY ONLINE</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script type="module">
+  import { navbar } from "./components/navbar-pay.js";
+  import { address } from "./components/address.js";
+  let check_nav = document.getElementById("check-nav");
+  let add_address = document.getElementById("check-address");
+  check_nav.innerHTML = navbar();
+  add_address.innerHTML = address();
+
+  document.getElementById("logo-click").addEventListener("click", () => {
+    window.location.href = "index.html";
+  });
+  document.getElementById("add-form").addEventListener("submit", (event) => {
+    event.preventDefault();
+    let show_add = document.getElementById("check-address");
+    let div = document.createElement("h3");
+    let detail_div = document.createElement("div");
+    let name = document.getElementById("add-name").value;
+
+    let detail =
+      document.getElementById("add-one").value +
+      ", " +
+      document.getElementById("add-area").value +
+      ", " +
+      document.getElementById("add-land").value +
+      ", " +
+      document.getElementById("add-two").value +
+      "-" +
+      document.getElementById("add-pin").value;
+    div.innerHTML = name;
+
+    detail_div.innerHTML = detail;
+    show_add.append(div, detail_div);
+    window.location.href = "#";
+  });
+</script>
+<script>
+  document.getElementById("btn-pay").addEventListener("click", () => {
+    window.location.href = "payment.html";
+  });
+  document.getElementById("btn-del").addEventListener("click", () => {
+    window.location.href = "success.html";
+  });
+  document.querySelector("#amount").textContent =
+    localStorage.getItem("cartAmount");
+  document.querySelector("#sub-total").textContent =
+    localStorage.getItem("subTotal");
+</script>

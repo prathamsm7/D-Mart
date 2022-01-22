@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UPI</title>
+    <link rel="stylesheet" href="styles/upiGateway.css" />
+    <link rel="icon" type="image/png" href="./images/upi.png" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="nav-upi">
+        <img src="images/upi-image.jpg" alt="upi-logo" />
+        <img src="images/billdesk.jpg" alt="" />
+      </div>
+      <div id="pay-details">
+        <div>
+          <div>DMART</div>
+          <div>Merchant Name</div>
+        </div>
+        <div>
+          <div id="p-dis"></div>
+          <div>Amount To Pay</div>
+        </div>
+        <div>
+          <div>WHD40856015233</div>
+          <div>Transcation Refernce Number</div>
+        </div>
+      </div>
+      <div id="make-pay">
+        <form action="">
+          <h3>Enter your UPI ID / VPA</h3>
+          <input type="email" required /><br /><br />
+          <input type="submit" value="Make Payment" />
+        </form>
+      </div>
+      <div>
+        <a href="payment.html">Cancel and Go back </a><span>to merchant</span>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  document.querySelector("form").addEventListener("submit", (event) => {
+    event.preventDefault();
+    alert("Payment Complete");
+    window.location.href = "success.html";
+    localStorage.removeItem("d-martAdd");
+  });
+
+  let final_amount = +localStorage.getItem("cartAmount");
+  document.querySelector("#p-dis").innerHTML = `Rs. ${final_amount}`;
+</script>
