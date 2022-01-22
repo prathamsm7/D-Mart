@@ -72,6 +72,9 @@
   let nav = document.getElementById("navbar");
   nav.innerHTML = navbar();
 
+  document.getElementById("nav-name").innerText =
+    localStorage.getItem("mylocal_2");
+
   var cartArr = JSON.parse(localStorage.getItem("cartDatabase")) || [];
 
   crT();

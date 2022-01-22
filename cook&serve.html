@@ -84,6 +84,9 @@
   let nav = document.getElementById("navbar");
   nav.innerHTML = navbar();
 
+  document.getElementById("nav-name").innerText =
+    localStorage.getItem("mylocal_2");
+
   let data = [
     {
       name: "GROCERY",

@@ -1,85 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
-    <link rel="stylesheet" href="/styles/navbar_rupesh.css">
-    <link rel="stylesheet" href="/styles/sidebar.css">
-    <link rel="stylesheet" href="/styles/ready.css">
-    <link rel="stylesheet" href="/styles/footer_rupesh.css">
-    <link rel="stylesheet" href="/styles/search.css">
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/styles/navbar_rupesh.css" />
+    <link rel="stylesheet" href="/styles/sidebar.css" />
+    <link rel="stylesheet" href="/styles/ready.css" />
+    <link rel="stylesheet" href="/styles/footer_rupesh.css" />
+    <link rel="stylesheet" href="/styles/search.css" />
 
-
-    <style>
-   
-    </style>
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div id="navbar"></div>
 
     <div id="myModal" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <ul id="searchList"></ul>
-        </div>
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <ul id="searchList"></ul>
       </div>
-
-    <div id="center">
-        <div id="left">
-         
-
-        </div>
-        <div id="right">
-            <div id="block">
-                <div id="img1">
-                    <img id="img11" src="https://ak1.picdn.net/shutterstock/videos/32669941/thumb/12.jpg?i10c=img.resize(height:160)" alt="">
-                </div>
-                <div id="p_tag">
-                    <p id="pu" >There are no item in your Ready list</p>
-                    <p id="pd">The list will be auto-populated according to the items you frequently buy.</p>
-                </div>
-                <div id="btn0">
-                    <a href="home.html"><button id="btn00">START SHOPPING</button></a>
-                </div>
-            </div>
-        </div>
     </div>
 
-        <div id="ftr3"></div>
-</body>
+    <div id="center">
+      <div id="left"></div>
+      <div id="right">
+        <div id="block">
+          <div id="img1">
+            <img
+              id="img11"
+              src="https://ak1.picdn.net/shutterstock/videos/32669941/thumb/12.jpg?i10c=img.resize(height:160)"
+              alt=""
+            />
+          </div>
+          <div id="p_tag">
+            <p id="pu">There are no item in your Ready list</p>
+            <p id="pd">
+              The list will be auto-populated according to the items you
+              frequently buy.
+            </p>
+          </div>
+          <div id="btn0">
+            <a href="home.html"><button id="btn00">START SHOPPING</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="ftr3"></div>
+  </body>
 </html>
 <script type="module">
-    import navbar from "/scripts/navbar_rupesh.js";
+  import navbar from "/scripts/navbar_rupesh.js";
 
-let nav = document.getElementById("navbar");
-nav.innerHTML = navbar();
+  let nav = document.getElementById("navbar");
+  nav.innerHTML = navbar();
 
-import sidebar from "/scripts/sidebar.js";
+  import sidebar from "/scripts/sidebar.js";
   let side = document.getElementById("left");
   side.innerHTML = sidebar();
 
   import footer from "/scripts/footer_rupesh.js";
   let foot = document.getElementById("ftr3");
 
-
-
-
   foot.innerHTML = footer();
 
-
-
-
- import { findprod, appendProdData } from "/scripts/search.js";
+  import { findprod, appendProdData } from "/scripts/search.js";
 
   let s_input = document.getElementById("search");
   let f_input = document.querySelector(".f_input");
@@ -205,29 +205,18 @@ import sidebar from "/scripts/sidebar.js";
     x[myIndex - 1].style.display = "block";
     setTimeout(carousel, 4000); // Change image every 2 seconds
   }
-
-
-
-  
- 
-
-
-
 </script>
 
-<script type=module>
+<script type="module">
+  let user_name = localStorage.getItem("mylocal_2");
+  console.log(user_name);
 
-let user_name = localStorage.getItem("mylocal_2");
-      console.log(user_name);
+  let one_ = document.getElementById("user");
 
-      let one_ = document.getElementById("user");
-    
-      one_.innerText = user_name;
+  one_.innerText = user_name;
 
+  let city_location = localStorage.getItem("mylocal_3");
+  let two_ = document.getElementById("city");
 
-      let city_location = localStorage.getItem("mylocal_3");
-      let two_ =  document.getElementById("city");
-
-      two_.innerText = city_location;
+  two_.innerText = city_location;
 </script>
-

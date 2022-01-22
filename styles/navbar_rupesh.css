@@ -6,7 +6,6 @@ body {
   height: 50px;
 
   margin-left: 20px;
-  
 }
 #lct {
   grid-area: lc;
@@ -42,18 +41,16 @@ body {
   font-size: 16px;
   font-weight: 600;
   color: #373737;
-  font-family: Muli, sans-serif;
+  font-family: "Mulish", sans-serif;
   border-bottom: 1px solid rgb(73, 73, 73);
 }
 
 #logo > img {
   width: 130px;
-  margin-left: 10px ;
+  margin-left: 10px;
   height: 100%;
   /* float: right; */
-  
 }
-
 
 #form {
   display: flex;
@@ -93,10 +90,10 @@ i {
   color: #25a541;
   padding-right: 5px;
 }
-#user{
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+#user {
+  font-family: "Mulish", sans-serif;
   font-size: 16px;
-  color:green;
+  color: green;
   margin-left: 10px;
 }
 /* #logo_img{
@@ -108,30 +105,29 @@ i {
   width:100px;
 } */
 
-@media only screen and (min-width:375px) and (max-width:768px){
-  #navbar{
-      grid-template-columns: repeat(2,1fr);
-      grid-template-rows: repeat(3,100px);
-      grid-template-areas: "lg lc"
-                           " fm fm "
-                           "si ct";
-  }
-  
-}
-
-@media only screen and (min-width:0px) and (max-width:375px){
-  #navbar{
-      width:100%;
-      grid-template-columns: repeat(1,1fr);
-      grid-template-rows: repeat(3,100px);
-      grid-template-areas: "lg lc"
-                       "fm fm"
-                       "si ct";
-  }
-
-  #logo{
-    width:60%;
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+  #navbar {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    grid-template-areas:
+      "lg lc"
+      " fm fm "
+      "si ct";
   }
 }
 
+@media only screen and (min-width: 0px) and (max-width: 375px) {
+  #navbar {
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    grid-template-areas:
+      "lg lc"
+      "fm fm"
+      "si ct";
+  }
 
+  #logo {
+    width: 60%;
+  }
+}

@@ -1,116 +1,108 @@
-#footer{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: 250px;
-    grid-template-areas: "one two three" ;
-    gap:100px;
-    margin-top: 50px;
-    /* border:1px solid black; */
+#footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 250px;
+  grid-template-areas: "one two three";
+  gap: 100px;
+  margin-top: 50px;
+  /* border:1px solid black; */
 }
-#f_one{
-    grid-area: one;
+#f_one {
+  grid-area: one;
 }
-#f_two{
-    grid-area: two;
-    margin-left: 200px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+#f_two {
+  grid-area: two;
+  margin-left: 200px;
+  font-family: "Mulish", sans-serif;
 }
-#f_three{
-    grid-area: three;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+#f_three {
+  grid-area: three;
+  font-family: "Mulish", sans-serif;
 }
-#small_img{
-    display:grid;
-    grid-template-columns: repeat(5,50px);
-    grid-template-areas: "a1 a2 a3 a4 a5";
-    margin-left: 45px;
-    margin-top: 20px;
-    
-
+#small_img {
+  display: grid;
+  grid-template-columns: repeat(5, 50px);
+  grid-template-areas: "a1 a2 a3 a4 a5";
+  margin-left: 45px;
+  margin-top: 20px;
 }
 
-#gp_img{
-    height:50px;
-    width:250px;
-    grid-area:g;
+#gp_img {
+  height: 50px;
+  width: 250px;
+  grid-area: g;
 }
-#apl_img{
-    height:50px;
-    width:250px;
-    grid-area:a;
-    
-
+#apl_img {
+  height: 50px;
+  width: 250px;
+  grid-area: a;
 }
 
-#gp_img:hover{
-    cursor: pointer;
-
+#gp_img:hover {
+  cursor: pointer;
 }
-#apl_img{
-    cursor: pointer;
-    
-
+#apl_img {
+  cursor: pointer;
 }
-#gp_apl{
-    display:grid;
-    grid-template-columns: repeat(2,200px);
-    grid-template-areas: "g a";
-    grid-gap:20px;
+#gp_apl {
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  grid-template-areas: "g a";
+  grid-gap: 20px;
 }
-#a1{
-    grid-area: a1;
+#a1 {
+  grid-area: a1;
 }
-#a1:hover{
-    cursor: pointer;
+#a1:hover {
+  cursor: pointer;
 }
-#a2:hover{
-    cursor: pointer;
+#a2:hover {
+  cursor: pointer;
 }
-#a3:hover{
-    cursor: pointer;
+#a3:hover {
+  cursor: pointer;
 }
-#a4:hover{
-    cursor: pointer;
+#a4:hover {
+  cursor: pointer;
 }
-#a5:hover{
-    cursor: pointer;
+#a5:hover {
+  cursor: pointer;
 }
 
-#a2{
-    grid-area: a2;
+#a2 {
+  grid-area: a2;
 }
-#a3{
-    grid-area: a3;
+#a3 {
+  grid-area: a3;
 }
-#a4{
-    grid-area: a4;
+#a4 {
+  grid-area: a4;
 }
-#a5{
-    grid-area: a5;
+#a5 {
+  grid-area: a5;
 }
-#line_t{
-    margin-left: 50px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+#line_t {
+  margin-left: 50px;
+  font-family: "Mulish", sans-serif;
 }
-#ph:hover{
-     text-decoration: underline;
-     cursor: pointer;
+#ph:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
-#t{
-    width:100%;
-    
-    border: 0.5px solid black;
-    
+#t {
+  width: 100%;
+
+  border: 0.5px solid black;
 }
-#l{
-    width:95%;
-    margin-left: 30px;
-    border: 0.5px solid black;
+#l {
+  width: 95%;
+  margin-left: 30px;
+  border: 0.5px solid black;
 }
-#bottom{
-    grid-area: bt;
-    margin-left: 450px;
-    margin-top: 20px;
+#bottom {
+  grid-area: bt;
+  margin-left: 450px;
+  margin-top: 20px;
 }
 
 /* @media only screen and (min-width:375px) and (max-width:768px){
@@ -137,69 +129,69 @@
 } */
 
 @media (min-width: 340px) and (max-width: 820px) {
-    #footer {
-      display: block;
-      /* grid-template-columns: repeat(3, 1fr);
+  #footer {
+    display: block;
+    /* grid-template-columns: repeat(3, 1fr);
       grid-template-areas: "one two three"; */
-      margin-top: 50px;
-      border-top: 1px solid gray;
-    }
-    #f_one {
-      width: 100%;
-      margin: auto;
-      text-align: center;
-    }
-    #gp_apl {
-      display: grid;
-      grid-template-columns: repeat(2, 200px);
-      grid-template-areas: "g a";
-      grid-gap: 20px;
-      justify-content: center;
-    }
-    #small_img {
-      display: grid;
-      grid-template-columns: repeat(5, 50px);
-      grid-template-areas: "a1 a2 a3 a4 a5";
-      margin-left: 45px;
-      margin-top: 20px;
-      justify-content: center;
-    }
-    #f_two,
-    #f_three {
-      margin-left: 20%;
-    }
+    margin-top: 50px;
+    border-top: 1px solid gray;
   }
-  
-  @media (min-width: 0px) and (max-width: 376px) {
-    #footer {
-        display: block;
-        /* grid-template-columns: repeat(3, 1fr);
+  #f_one {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+  #gp_apl {
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    grid-template-areas: "g a";
+    grid-gap: 20px;
+    justify-content: center;
+  }
+  #small_img {
+    display: grid;
+    grid-template-columns: repeat(5, 50px);
+    grid-template-areas: "a1 a2 a3 a4 a5";
+    margin-left: 45px;
+    margin-top: 20px;
+    justify-content: center;
+  }
+  #f_two,
+  #f_three {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 376px) {
+  #footer {
+    display: block;
+    /* grid-template-columns: repeat(3, 1fr);
         grid-template-areas: "one two three"; */
-        margin-top: 50px;
-        border-top: 1px solid gray;
-      }
-      #f_one {
-        width: 100%;
-        margin: auto;
-        text-align: center;
-      }
-      #gp_apl {
-        display: grid;
-        grid-template-columns: repeat(2, 200px);
-        grid-template-areas: "g a";
-        grid-gap: 20px;
-        justify-content: center;
-      }
-      #small_img {
-        display: grid;
-        grid-template-columns: repeat(5, 50px);
-        grid-template-areas: "a1 a2 a3 a4 a5";
-        margin-left: 45px;
-        margin-top: 20px;
-        justify-content: center;
-      }
-      #f_two,
-      #f_three {
-        margin-left: 20%;
-      }
-    }
+    margin-top: 50px;
+    border-top: 1px solid gray;
+  }
+  #f_one {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+  #gp_apl {
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    grid-template-areas: "g a";
+    grid-gap: 20px;
+    justify-content: center;
+  }
+  #small_img {
+    display: grid;
+    grid-template-columns: repeat(5, 50px);
+    grid-template-areas: "a1 a2 a3 a4 a5";
+    margin-left: 45px;
+    margin-top: 20px;
+    justify-content: center;
+  }
+  #f_two,
+  #f_three {
+    margin-left: 20%;
+  }
+}

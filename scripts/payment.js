@@ -1,5 +1,3 @@
-document.getElementById("nav-name").textContent =
-  localStorage.getItem("mylocal_2");
 function debit() {
   document.getElementById("pay-now").innerHTML = null;
   document.getElementById("credit").style.backgroundColor = "white";
@@ -101,6 +99,7 @@ function cash() {
     alert("Please Pay After Order Get Delivered");
 
     window.location.href = "success.html";
+    localStorage.removeItem("cartDatabase");
   });
   document.getElementById("cash").style.backgroundColor = "#e4f4e8";
   main.append(secure_img, msg, btn);

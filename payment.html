@@ -90,6 +90,8 @@
   import { navbar } from "./components/navbar-pay.js";
   let check_nav = document.getElementById("check-nav");
   check_nav.innerHTML = navbar();
+  document.getElementById("nav-name").innerText =
+    localStorage.getItem("mylocal_2");
 </script>
 <script src="scripts/payment.js"></script>
 <script>

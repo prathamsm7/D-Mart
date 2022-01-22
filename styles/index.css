@@ -91,7 +91,8 @@
   margin: 5px 0 5px;
   margin-left: 3%;
   font-size: 16px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  font-family: "Mulish", sans-serif;
 }
 
 #offers > img,
@@ -270,8 +271,8 @@
   color: #373737;
 }
 
-#refundP > p {
-}
+/* #refundP > p {
+} */
 #refundP button {
   background-color: #373737;
   color: white;
@@ -317,7 +318,7 @@
     font-size: 16px;
     font-weight: 600;
     color: #373737;
-    font-family: Muli, sans-serif;
+    font-family: "Mulish", sans-serif;
     border-bottom: 1px solid rgb(73, 73, 73);
   }
   #signin a :nth-child(2) {

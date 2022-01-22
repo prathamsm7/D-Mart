@@ -70,9 +70,9 @@
 
   document.getElementById("logo-click").addEventListener("click", () => {
     window.location.href = "index.html";
-    document.getElementById("nav-name").textContent =
-      localStorage.getItem("mylocal_2");
   });
+  document.getElementById("nav-name").innerText =
+    localStorage.getItem("mylocal_2");
   document.getElementById("add-form").addEventListener("submit", (event) => {
     event.preventDefault();
     let show_add = document.getElementById("check-address");

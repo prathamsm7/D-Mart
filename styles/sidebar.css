@@ -1,76 +1,72 @@
-#ul1{
-    font-size: 20px;
-    height:40px;
-    width:240px;
-    border: 1px solid transparent;
-    padding-top: 10px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    border: 1px solid rgb(190, 214, 190);
-    /* margin-top: 10px; */
-    padding-left: 10px;
+#ul1 {
+  font-size: 20px;
+  height: 40px;
+  width: 240px;
+  border: 1px solid transparent;
+  padding-top: 10px;
+  font-family: "Mulish", sans-serif;
+  border: 1px solid rgb(190, 214, 190);
+  /* margin-top: 10px; */
+  padding-left: 10px;
 }
-#ul1:hover{
-    background-color: rgb(190, 214, 190);
-    color:rgb(22, 73, 22);
-    cursor: pointer;
+#ul1:hover {
+  background-color: rgb(190, 214, 190);
+  color: rgb(22, 73, 22);
+  cursor: pointer;
 }
-#ul2{
-    font-size: 20px;
-    height:40px;
-    width:240px;
-    border: 1px solid rgb(204, 209, 204);
-    padding-top: 10px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    
-   
-    padding-left: 10px;
+#ul2 {
+  font-size: 20px;
+  height: 40px;
+  width: 240px;
+  border: 1px solid rgb(204, 209, 204);
+  padding-top: 10px;
+  font-family: "Mulish", sans-serif;
+
+  padding-left: 10px;
 }
-#ul2:hover{
-    background-color: rgb(190, 214, 190);
-    color:rgb(22, 73, 22);
-    cursor: pointer;
+#ul2:hover {
+  background-color: rgb(190, 214, 190);
+  color: rgb(22, 73, 22);
+  cursor: pointer;
 }
-#ul3{
-    font-size: 20px;
-    height:40px;
-    width:240px;
-    border: 1px solid rgb(190, 214, 190);
-    padding-top: 10px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    
-    
-    padding-left: 10px;
+#ul3 {
+  font-size: 20px;
+  height: 40px;
+  width: 240px;
+  border: 1px solid rgb(190, 214, 190);
+  padding-top: 10px;
+  font-family: "Mulish", sans-serif;
+
+  padding-left: 10px;
 }
-#ul3:hover{
-    background-color: rgb(190, 214, 190);
-    color:rgb(22, 73, 22);
-    cursor: pointer;
+#ul3:hover {
+  background-color: rgb(190, 214, 190);
+  color: rgb(22, 73, 22);
+  cursor: pointer;
 }
-#li1{
-    font-size: 18px;
-    height:30px;
-    width:250px;
-    border: 1px solid rgb(190, 214, 190);
-    text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    
+#li1 {
+  font-size: 18px;
+  height: 30px;
+  width: 250px;
+  border: 1px solid rgb(190, 214, 190);
+  text-align: center;
+  font-family: "Mulish", sans-serif;
 }
-#li2{
-    font-size: 18px;
-    height:30px;
-    width:250px;
-    border: 1px solid rgb(190, 214, 190);
-    text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-   
+#li2 {
+  font-size: 18px;
+  height: 30px;
+  width: 250px;
+  border: 1px solid rgb(190, 214, 190);
+  text-align: center;
+  font-family: "Mulish", sans-serif;
 }
-#li1:hover{
-    background-color: rgb(190, 214, 190);
-    color:rgb(14, 109, 14);
-    cursor: pointer;
+#li1:hover {
+  background-color: rgb(190, 214, 190);
+  color: rgb(14, 109, 14);
+  cursor: pointer;
 }
-#li2:hover{
-    background-color: rgb(190, 214, 190);
-    color:rgb(14, 109, 14);
-    cursor: pointer;
+#li2:hover {
+  background-color: rgb(190, 214, 190);
+  color: rgb(14, 109, 14);
+  cursor: pointer;
 }

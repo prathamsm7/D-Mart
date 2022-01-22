@@ -9,7 +9,12 @@
     <link rel="stylesheet" href="./styles/Cart.css">
     <link rel="stylesheet" href="./styles/navbar.css" />
     <link rel="stylesheet" href="./styles/search.css" />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
 
 </head>
 
@@ -117,6 +122,9 @@
   
     let nav = document.getElementById("navbar");
     nav.innerHTML = navbar();
+
+    document.getElementById("nav-name").innerText =
+    localStorage.getItem("mylocal_2");
 
 
     let data = [

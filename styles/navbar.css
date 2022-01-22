@@ -2,7 +2,7 @@ body {
   margin: 2px 0 0;
   background: #f0f2f6;
   margin-bottom: 50px;
-  font-family: Muli, sans-serif;
+  font-family: "Mulish", sans-serif;
   font-size: 16px;
 }
 
@@ -70,7 +70,7 @@ body {
   font-size: 16px;
   font-weight: 600;
   color: #373737;
-  font-family: Muli, sans-serif;
+  font-family: "Mulish", sans-serif;
   border-bottom: 1px solid rgb(73, 73, 73);
 }
 
@@ -172,7 +172,7 @@ li {
   display: flex;
   align-items: center;
   font-weight: 500;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Mulish", sans-serif;
 }
 
 .catImg {
