@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <script
+      src="https://kit.fontawesome.com/059c5846e8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./styles/cate-doul.css" />
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <!--  <link rel="stylesheet" href="./styles/footer.css" /> -->
+    <link rel="stylesheet" href="./styles/search.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <ul id="searchList"></ul>
+      </div>
+    </div>
+
+    <div id="continer">
+      <div id="doulath">
+        <div id="cat">
+          <h3><i class="fas fa-bars" id="d"> All Categories</i></h3>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th><h3>Grocery</h3></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="dal" onclick="dals()">
+              <td>Dals</td>
+            </tr>
+            <tr id="pulses" onclick="pulse()">
+              <td>Pulses</td>
+            </tr>
+            <tr id="dry" onclick="dry()">
+              <td>Dry Fruits</td>
+            </tr>
+            <tr id="oil" onclick="oil()">
+              <td>Cooking Oil</td>
+            </tr>
+            <tr id="masala" onclick="masala()">
+              <td>Masala & Spices</td>
+            </tr>
+            <tr id="rice" onclick="rice()">
+              <td>Rice & Rice Products</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <hr />
+
+      <div id="basha">
+        <div id="nav"></div>
+        <h1 id="h1">DMart Grocery</h1>
+        <div id="con"></div>
+      </div>
+    </div>
+  </body>
+</html>
+<!-- <script type="module">
+  import nav from "./scripts/nav.js";
+  document.getElementById("navbar").innerHTML = nav();
+  import navbar from "./scripts/navbar-dou.js";
+  document.getElementById("navbar").innerHTML = navbar();
+</script> -->
+<script src="./scripts/grocery.js"></script>
+
+<script type="module">
+  import { navbar, openmenu } from "../components/navbar.js";
+  import footer from "../components/footer.js";
+  import { findprod, appendProdData } from "../components/search.js";
+  import { topbar } from "../components/topbar.js";
+
+  let nav = document.getElementById("navbar");
+  nav.innerHTML = navbar();
+
+  let data = [
+    {
+      name: "GROCERY",
+      img: "https://img.dmart.in/images/rwd/categories/aesc-grocerycore.svg",
+      subcat: "Dals,Pulses,Dry Fruits,Cooking oil etc...",
+    },
+    {
+      name: "APPLIANCES",
+      img: "https://img.dmart.in/images/rwd/categories/aesc-appliancescore.svg",
+      subcat: "Dals,Pulses,Dry Fruits,Cooking oil etc...",
+    },
+    {
+      name: "BABY & KIDS",
+      img: "https://img.dmart.in/images/rwd/categories/aesc-babyandkidscore.svg",
+      subcat: "Dals,Pulses,Dry Fruits,Cooking oil etc...",
+    },
+    {
+      name: "HOME & KITCHEN",
+      img: "https://img.dmart.in/images/rwd/categories/homkitchen15421.svg",
+      subcat: "Dals,Pulses,Dry Fruits,Cooking oil etc...",
+    },
+    {
+      name: "PERSONAL CARE",
+      img: "https://img.dmart.in/images/rwd/categories/aesc-personalcare211221.svg",
+      subcat: "Dals,Pulses,Dry Fruits,Cooking oil etc...",
+    },
+    {
+      name: "DAIRY & BEVERAGES",
+      img: "	https://img.dmart.in/images/rwd-mobile/categories/aesc-grocerycore.svg",
+      subcat: "Dals,Pulses,Dry Fruits,Cooking oil etc...",
+    },
+    {
+      name: "PACKAGED FOOD",
+      img: "https://img.dmart.in/images/rwd-mobile/categories/aesc-packagedfoodcore.svg",
+      subcat: "Dals,Pulses,Dry Fruits,Cooking oil etc...",
+    },
+    {
+      name: "FOOTWEAR",
+      img: "https://img.dmart.in/images/rwd-mobile/categories/aesc-footwearcore.svg",
+      subcat: "Dals,Pulses,Dry Fruits,Cooking oil etc...",
+    },
+    {
+      name: "CLOTHING",
+      img: "	https://img.dmart.in/images/rwd-mobile/categories/935201.svg",
+      subcat: "Dals,Pulses,Dry Fruits,Cooking oil etc...",
+    },
+    {
+      name: "SCHOOL SUPPLIES",
+      img: "https://img.dmart.in/images/rwd-mobile/categories/aesc-schoolsuppliescore.svg",
+      subcat: "Dals,Pulses,Dry Fruits,Cooking oil etc...",
+    },
+  ];
+
+  let menu = document.getElementById("openmenu");
+  menu.addEventListener("click", () => {
+    document.getElementById("mySidepanel").style.width = "100%";
+
+    let cate = document.getElementById("categories");
+    cate.innerHTML = "";
+    data.forEach(({ img, name, subcat }) => {
+      let image = document.createElement("img");
+      image.src = img;
+      image.setAttribute("class", "catImg");
+
+      let nm = document.createElement("p");
+      nm.innerText = name;
+
+      let desc = document.createElement("p");
+      desc.innerText = subcat;
+
+      let li = document.createElement("li");
+      li.append(image, nm);
+
+      cate.append(li);
+    });
+  });
+
+  var cartArr = JSON.parse(localStorage.getItem("cartDatabase")) || [];
+
+  crT();
+  function crT() {
+    document.getElementById("crTotal").innerText = cartArr.length;
+  }
+
+  // search function
+  let s_input = document.getElementById("search");
+  let f_input = document.querySelector(".f_input");
+  let btncl = document.querySelectorAll("#btn");
+
+  var modal = document.getElementById("myModal");
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  let sList = document.getElementById("searchList");
+  // sList.innerHTML = "";
+
+  let lst = document.getElementById("form");
+  btncl.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      console.log("open modal");
+
+      // When the user clicks the button, open the modal
+      modal.style.display = "block";
+      let sList = document.getElementById("searchList");
+
+      if (s_input.value) {
+        let newData = findprod(s_input.value);
+        sList.innerHTML = "";
+        newData.forEach((prod) => {
+          // console.log(prod);
+          let li = document.createElement("li");
+          li.setAttribute("class", "elemLi");
+
+          let p = document.createElement("p");
+          p.innerText = prod.name.toUpperCase();
+
+          let img = document.createElement("img");
+          img.src = prod.imgUrl;
+
+          li.addEventListener("click", () => {
+            console.log(prod);
+            window.location.href = "grocery.html";
+          });
+
+          li.append(img, p);
+          sList.append(li);
+        });
+      }
+
+      if (f_input.value) {
+        let newData = findprod(f_input.value);
+        sList.innerHTML = "";
+        newData.forEach((prod) => {
+          let li = document.createElement("li");
+          li.setAttribute("class", "elemLi");
+
+          let p = document.createElement("p");
+          p.innerText = prod.name.toUpperCase();
+
+          let img = document.createElement("img");
+          img.src = prod.imgUrl;
+
+          li.addEventListener("click", () => {
+            console.log(prod);
+            window.location.href = "grocery.html";
+          });
+
+          li.append(img, p);
+          sList.append(li);
+        });
+      }
+    });
+  });
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+  let usrArr = JSON.parse(localStorage.getItem("mylocal")) || [];
+
+  if (usrArr.length !== 0) {
+    document.getElementById("userName").innerText = usrArr[0].name;
+  }
+</script>
+<script>
+  function closeNav() {
+    document.getElementById("mySidepanel").style.width = "0";
+  }
+
+  function openFind() {
+    document.getElementById("myfind").style.height = "60px";
+  }
+
+  function closeInp() {
+    document.getElementById("myfind").style.height = "0";
+  }
+
+  function allCategory() {
+    window.location.href = "./allcatageory.html";
+  }
+
+  var myIndex = 0;
+  carousel();
+
+  function carousel() {
+    var i;
+    var x = document.getElementById("images");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {
+      myIndex = 1;
+    }
+    x[myIndex - 1].style.display = "block";
+    setTimeout(carousel, 4000); // Change image every 2 seconds
+  }
+</script>
