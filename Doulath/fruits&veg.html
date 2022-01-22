@@ -1,55 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
-    <script src="https://kit.fontawesome.com/059c5846e8.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
+    <script
+      src="https://kit.fontawesome.com/059c5846e8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/styles/cate-doul.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;500&display=swap"
       rel="stylesheet"
     />
-</head>
-<body>
+  </head>
+  <body>
     <div id="navbar"></div>
     <div id="continer">
-        <div id="doulath"><div id="cat">
-            <h3><i class="fas fa-bars"  id="d">  All Categories</i></h3>
+      <div id="doulath">
+        <div id="cat">
+          <h3><i class="fas fa-bars" id="d"> All Categories</i></h3>
         </div>
         <table>
-            <thead>
-                <tr>
-                    <th><h3>Fruits & Vegetables</h3></th>
-                
-                </tr>
-            </thead>
-            <tbody>
-                <tr id="fruits" onclick="fruits()"><td>Fresh Fruits</td></tr>
-                <tr id="vegetables" onclick="vegetables()"><td>Vegetables</td></tr>
-            </tbody>
+          <thead>
+            <tr>
+              <th><h3>Fruits & Vegetables</h3></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="fruits" onclick="fruits()">
+              <td>Fresh Fruits</td>
+            </tr>
+            <tr id="vegetables" onclick="vegetables()">
+              <td>Vegetables</td>
+            </tr>
+          </tbody>
         </table>
-            
-        </div>
-        <hr/>
-        <div id="basha">
-            <div id="nav"></div>
-            <h1 id="h1">Fruits & Vegetables</h1>
-    <div id="con"></div>
-        </div>
-        
-</div>
-   
-</body>
+      </div>
+      <hr />
+      <div id="basha">
+        <div id="nav"></div>
+        <h1 id="h1">Fruits & Vegetables</h1>
+        <div id="con"></div>
+      </div>
+    </div>
+  </body>
 </html>
 <script type="module">
-    import nav from "./nav.js";
-    document.getElementById("nav").innerHTML=nav()
-    import navbar from "./navbar.js";
-     document.getElementById("navbar").innerHTML= navbar();
-
+  import nav from "./nav.js";
+  document.getElementById("nav").innerHTML = nav();
+  import navbar from "./navbar.js";
+  document.getElementById("navbar").innerHTML = navbar();
 </script>
 <script src="./fruits&veg.js"></script>
