@@ -39,11 +39,11 @@ function displayTable(arr) {
     td2.append(image);
 
     var td3 = document.createElement("td");
-    td3.textContent = "elem.qt";
+    td3.textContent = 1;
     var td4 = document.createElement("td");
     td4.textContent = "₹" + elem.price;
-    var td5 = document.createElement("td");
-    td5.textContent = "₹ " + "0.00";
+    // var td5 = document.createElement("td");
+    // td5.textContent = "₹ " + "0.00";
 
     // var td6 = document.createElement("td");
     // td6.textContent = elem.rs;
@@ -91,7 +91,7 @@ function displayTable(arr) {
     // document.querySelector("#total").textContent = TotalInRs;
 
     td7.append(btn);
-    tr.append(td1, td2, title, td3, td4, td5, td7);
+    tr.append(td1, td2, title, td3, td4, td7);
     document.querySelector("tbody").append(tr);
   });
 }
