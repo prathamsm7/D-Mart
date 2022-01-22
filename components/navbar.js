@@ -55,7 +55,7 @@ function navbar() {
       </div>
 
       <div id="signin">
-        <a href=""><i class="far fa-user"></i><span>Sign In/Register</span></a>
+        <a href="signup.html"><i class="far fa-user"></i><span>Sign In/Register</span></a>
       </div>
       <div id="cart">
         <a href="Cart.html"> <i class="fas fa-shopping-cart"></i><sup  id="crTotal"></sup><span>Cart</span></a>
