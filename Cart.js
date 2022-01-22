@@ -8,7 +8,7 @@ if (cartArr.length != 0) {
   var subTotalInRs = Math.ceil(
     cartArr
       .map(function (elem) {
-        return Number(elem.rs);
+        return Number(elem.price);
       })
       .reduce(function (a, b) {
         return a + b;
@@ -33,15 +33,15 @@ function displayTable(arr) {
     td2.setAttribute("id", "td2");
 
     var image = document.createElement("img");
-    image.setAttribute("src", elem.img);
+    image.setAttribute("src", elem.imgUrl);
     var title = document.createElement("td");
-    title.textContent = elem.title;
+    title.textContent = elem.name;
     td2.append(image);
 
     var td3 = document.createElement("td");
-    td3.textContent = elem.qt;
+    td3.textContent = "elem.qt";
     var td4 = document.createElement("td");
-    td4.textContent = "₹" + elem.rs;
+    td4.textContent = "₹" + elem.price;
     var td5 = document.createElement("td");
     td5.textContent = "₹ " + "0.00";
 
@@ -68,7 +68,7 @@ function displayTable(arr) {
         subTotalInRs = Math.ceil(
           arr
             .map(function (elem) {
-              return Number(elem.rs);
+              return Number(elem.price);
             })
             .reduce(function (a, b) {
               return a + b;

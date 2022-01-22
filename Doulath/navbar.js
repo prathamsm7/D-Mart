@@ -1,5 +1,5 @@
 function navbar() {
-    return `
+  return `
         <div id="myfind">
         <input
         id="search"
@@ -59,8 +59,6 @@ function navbar() {
           <a href=""> <i class="fas fa-shopping-cart"></i><sup  id="crTotal"></sup><span>Cart</span></a>
         </div>
       `;
-  }
-  
- 
-  
-  export default navbar
+}
+
+export default navbar;
