@@ -47,6 +47,7 @@
     alert("Payment Complete");
     window.location.href = "success.html";
     localStorage.removeItem("d-martAdd");
+    localStorage.removeItem("cartDatabase");
   });
 
   let final_amount = +localStorage.getItem("cartAmount");

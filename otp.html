@@ -33,6 +33,7 @@
     var check = document.querySelector("#otp").value;
     if (check == "1234") {
       localStorage.removeItem("d-martAdd");
+      localStorage.removeItem("cartDatabase");
       window.alert("Payment Successful");
       window.location.href = "success.html";
     } else {

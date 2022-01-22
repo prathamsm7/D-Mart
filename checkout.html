@@ -117,6 +117,7 @@
     } else {
       window.location.href = "success.html";
       localStorage.removeItem("d-martAdd");
+      localStorage.removeItem("cartDatabase");
     }
   });
   document.querySelector("#amount").textContent = `Rs. ${final_amount}`;
