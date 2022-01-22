@@ -123,9 +123,12 @@
     let nav = document.getElementById("navbar");
     nav.innerHTML = navbar();
 
-    document.getElementById("nav-name").innerText =
-    localStorage.getItem("mylocal_2");
+     let lgusr = localStorage.getItem("mylocal_2");
+  console.log(lgusr);
 
+  if (lgusr) {
+    document.getElementById("nav-name").innerText = lgusr;
+  }
 
     let data = [
     {

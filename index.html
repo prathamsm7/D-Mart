@@ -201,8 +201,8 @@
   let nav = document.getElementById("navbar");
   nav.innerHTML = navbar();
 
-  document.getElementById("nav-name").innerText =
-    localStorage.getItem("mylocal_2");
+  // document.getElementById("nav-name").innerText =
+  //   localStorage.getItem("mylocal_2");
 
   let ft = document.getElementById("footer");
   ft.innerHTML = footer();
@@ -274,10 +274,22 @@
       let nm = document.createElement("p");
       nm.innerText = name;
 
-      let desc = document.createElement("p");
-      desc.innerText = subcat;
-
       let li = document.createElement("li");
+      li.addEventListener("click", () => {
+        name = name.toLowerCase();
+        console.log(name);
+        if (name == "grocery" || name == "baby & kids") {
+          location.href = "grocery.html";
+        } else if (name == "appliances" || name == "footwear") {
+          location.href = "cook&serve.html";
+        } else if (
+          name == "packaged food" ||
+          name == "dairy & beverages" ||
+          name == "personal care"
+        ) {
+          location.href = "cook&serve.html";
+        }
+      });
       li.append(image, nm);
 
       cate.append(li);
@@ -547,10 +559,11 @@
       modal.style.display = "none";
     }
   };
-  let usrArr = JSON.parse(localStorage.getItem("mylocal")) || [];
+  let usrArr = localStorage.getItem("mylocal_2");
+  console.log(usrArr);
 
-  if (usrArr.length !== 0) {
-    document.getElementById("userName").innerText = usrArr[0].name;
+  if (usrArr) {
+    document.getElementById("nav-name").innerText = usrArr;
   }
 </script>
 <script>

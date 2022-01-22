@@ -74,8 +74,13 @@
     </div>
   </body>
 </html>
+<script type="module">
+  import nav from "./scripts/nav.js";
+  document.getElementById("nav").innerHTML = nav();
+  // import navbar from "./scripts/navbar-dou.js";
+  // document.getElementById("navbar").innerHTML = navbar();
+</script>
 <script src="./scripts/cook&serve.js"></script>
-
 <script type="module">
   import { navbar, openmenu } from "../components/navbar.js";
   import footer from "../components/footer.js";
@@ -85,8 +90,12 @@
   let nav = document.getElementById("navbar");
   nav.innerHTML = navbar();
 
-  document.getElementById("nav-name").innerText =
-    localStorage.getItem("mylocal_2");
+  let lgusr = localStorage.getItem("mylocal_2");
+  console.log(lgusr);
+
+  if (lgusr) {
+    document.getElementById("nav-name").innerText = lgusr;
+  }
 
   let data = [
     {
@@ -251,11 +260,6 @@
       modal.style.display = "none";
     }
   };
-  let usrArr = JSON.parse(localStorage.getItem("mylocal")) || [];
-
-  if (usrArr.length !== 0) {
-    document.getElementById("userName").innerText = usrArr[0].name;
-  }
 </script>
 <script>
   function closeNav() {

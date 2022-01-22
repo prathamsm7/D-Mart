@@ -26,6 +26,10 @@ a {
   color: black;
   font-family: "Mulish", sans-serif;
 }
+
+#nav > a > p {
+  margin: 0;
+}
 a:hover {
   text-decoration: underline;
   cursor: pointer;
