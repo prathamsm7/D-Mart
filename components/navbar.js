@@ -30,7 +30,7 @@ function navbar() {
         <i class="fas fa-bars" id="openmenu"></i>
       </div>
     <div id="logo">
-    <a href="home.html">
+    <a href="index.html">
     <img
     src="./images/logo.jpg"
     alt="logo"
