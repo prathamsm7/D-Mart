@@ -2,7 +2,7 @@
  
 DMart Ready is a one-stop supermarket chain that aims to offer customers a wide range of basic home and personal products under one roof. 
 
-It was a group project of 4 members and executed in 6 days. 
+This clone is made using HTML,CSS and Javascript Tech Stack.It was a group project of 4 members and executed in 6 days. 
 
 #### Deployed Link - https://awesome-brattain-961b03.netlify.app
 
