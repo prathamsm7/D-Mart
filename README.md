@@ -4,7 +4,7 @@ DMart Ready is a one-stop supermarket chain that aims to offer customers a wide 
 
 It was a group project of 4 members and executed in 6 days. 
 
-#### Deployed Link - https://awesome-brattain-961b03.netlify.app/success.html
+#### Deployed Link - https://awesome-brattain-961b03.netlify.app
 
 ### Homepage
 
@@ -30,3 +30,6 @@ It was a group project of 4 members and executed in 6 days.
 
 ### Order Completion
 ![Bigbasket](./images/order.PNG)
+
+
+## Thank You ✌
